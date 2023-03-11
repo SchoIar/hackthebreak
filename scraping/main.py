@@ -44,4 +44,4 @@ def searchJobs(numberOfSearches, keywordChosen):
             write_json(job)
     return True
 
-assert(searchJobs(3, "Software Developer") == True)
+#assert(searchJobs(3, "Software Developer") == True)
