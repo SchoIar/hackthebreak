@@ -26,27 +26,6 @@ def write_json(newData):
         data['job-list'].append(newData)
         json.dump(data, file)
 
-
-jobPost = {
-    "Job title": "Software Engineer",
-    "Compensation": "100k/yr",
-    "Tech stack": "Python, Bash",
-    "Location": "Online",
-    "Link": "Indeed.com/mylin"
-}
-
-
-
-"""jobs = []
-for i in range(1,11):#scale this up later
-    job = api.search_jobs(keywords='Developer', remote = True, limit = 1, offset = i)
-    time.sleep(5*random.random() + 2)
-    jobs.append(job)
-
-for element in jobs:
-    title = element['title']
-    print(title)"""
-
 jobs = api.search_jobs(keywords = 'Developer', remote = True, limit = 2, offset = 1)
 for job in jobs:
     title = job['title']
