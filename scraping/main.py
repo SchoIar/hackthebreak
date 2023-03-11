@@ -5,6 +5,11 @@ load_dotenv()
 Password = os.getenv('PASSWORD')
 Email = os.getenv('EMAIL')
 
+data = {"job-list": [{}]}
+with open('jobs.json', 'w') as file:
+    json.dump(data, file)
+
+
 def read_json(filename='jobs.json'):
     with open(filename, 'r') as file:
         return json.load(file)
