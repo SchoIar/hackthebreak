@@ -26,19 +26,22 @@ def write_json(newData):
         data['job-list'].append(newData)
         json.dump(data, file)
 
-jobs = api.search_jobs(keywords = 'Developer', remote = True, limit = 2, offset = 1)
-for job in jobs:
-    title = job['title']
-    jobID = job['dashEntityUrn'].split(':')[-1]
-    #jobDetails = api.get_job(jobID)
-    jobLink = f'https://www.linkedin.com/jobs/view/{jobID}/'
-    job = {
-        "Job title":title,
-        "Job link":jobLink
-    }
-    if(title.lower().find('software') == True or title.lower().find('engineer') == True or title.lower().find('qa') == True or title.lower().find('developer') == True):
-        write_json(job)
-    else:
-        print(title)
-        write_json(job)
+def searchJobs(numberOfSearches, keywordChosen):
+    jobs = api.search_jobs(keywordChosen, remote = True, limit = numberOfSearches, offset = 1)
+    for job in jobs:
+        title = job['title']
+        jobID = job['dashEntityUrn'].split(':')[-1]
+        #jobDetails = api.get_job(jobID)
+        jobLink = f'https://www.linkedin.com/jobs/view/{jobID}/'
+        job = {
+            "Job title":title,
+            "Job link":jobLink
+        }
+        if(title.lower().find('software') == True or title.lower().find('engineer') == True or title.lower().find('qa') == True or title.lower().find('developer') == True):
+            write_json(job)
+        else:
+            print(title)
+            write_json(job)
+    return True
 
+assert(searchJobs(3, "Software Developer") == True)
