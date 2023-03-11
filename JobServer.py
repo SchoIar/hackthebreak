@@ -64,7 +64,7 @@ class JobServerHandler(socketserver.StreamRequestHandler):
                 print(path)
 
                 #checks if the path ends with .css or .js
-                if(path[-4:] != ".css" and path[-3:] != ".js"):
+                if(path[-4:] != ".css" and path[-3:] != ".js" and path[-4:] != ".jpg"):
                     #adds /index.html to the end of the file
                     path = path + "/Index.html"
 
@@ -72,7 +72,7 @@ class JobServerHandler(socketserver.StreamRequestHandler):
                 if(os.path.isfile("./website" + path)):
 
                     #opens the found html file
-                    returnfile  = open("./website" + path)
+                    returnfile  = open("./website" + path, mode="rb")
 
                     #reads teh content from the file
                     ContentReturn = returnfile.read()
@@ -89,6 +89,10 @@ class JobServerHandler(socketserver.StreamRequestHandler):
 
                         returnContentType = "Content-Type: application/javascript\r\n"
 
+                    elif(path[-4:] == ".jpg"):
+
+                        returnContentType = "Content-Type: image\jpeg"
+
                     else:
                         returnContentType = "Content-Type: text/html\r\n"
 
@@ -98,7 +102,7 @@ class JobServerHandler(socketserver.StreamRequestHandler):
                     print("replaing with header:\n" + returnHeader)
 
                     #writes the html return
-                    self.wfile.write((returnHeader + "\r\n\r\n" + ContentReturn).encode())
+                    self.wfile.write((returnHeader + "\r\n\r\n").encode() + ContentReturn)
 
                 else:
                     print("file at " + path + " not found")
