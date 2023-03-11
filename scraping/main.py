@@ -26,8 +26,8 @@ def write_json(newData):
         data['job-list'].append(newData)
         json.dump(data, file)
 
-def searchJobs(numberOfSearches, keywordChosen):
-    jobs = api.search_jobs(keywordChosen, remote = True, limit = numberOfSearches, offset = 1)
+def searchJobs(numberOfSearches, keywordChosen, offsetNumber):
+    jobs = api.search_jobs(keywordChosen, remote = True, limit = numberOfSearches, offset = offsetNumber)
     for job in jobs:
         title = job['title']
         jobID = job['dashEntityUrn'].split(':')[-1] 
@@ -44,4 +44,7 @@ def searchJobs(numberOfSearches, keywordChosen):
             write_json(job)
     return True
 
+for i in range(1,101):  
+    searchJobs(1, "Software Developer", i)
+    time.sleep(1*random.random()+random.randint(1,5))
 #assert(searchJobs(3, "Software Developer") == True)
