@@ -10,3 +10,15 @@ body{
 title{
     text-align:center;
 }
+
+.LoginButton{
+    color: #FFF;
+    text-decoration: solid;
+    background-color: #11F;
+    border-width: 1%;
+    border-color: #FFF;
+    border-style: solid;
+    width: 8%;
+    height: 150%;
+    margin: auto;
+}

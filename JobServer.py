@@ -108,7 +108,15 @@ class JobServerHandler(socketserver.StreamRequestHandler):
             else:
                 print("icon request")
 
-                self.wfile.write(b"HTTP/1.1 200 success\r\n\r\nthis worked?")
+                IconFile = open("./website/favicon.ico", mode="rb")
+
+                binIcon = IconFile.read()
+
+                IconFile.close()
+
+                self.wfile.write(b"HTTP/1.1 200 success\r\n" \
+                            + b"Content-Type: image/x-icon\r\nContent-Length: " + str(len(binIcon)).encode()\
+                            +b"\r\n\r\n" + binIcon)
 
 
 
