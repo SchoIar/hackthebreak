@@ -13,8 +13,9 @@ title{
 
 .navbar {
     width: 100%;
-    background-color: #9195ff;
+    background-color: #8e92fa;
     overflow: auto;
+    border-radius: 30px;
   }
 
   .navbar a {
@@ -30,9 +31,5 @@ title{
     background-color: #1029cf71;
   }
 
-  .active {
-    background-color: #04AA6D;
-  }
-  
   
   
