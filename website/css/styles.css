@@ -4,7 +4,8 @@ body{
     text-align: center;
     margin: 0.5;
     font-family:'Times New Roman', Times, serif;
-
+    background-image: url('https://thumbs.gfycat.com/AnchoredSoulfulCapeghostfrog-size_restricted.gif');
+        
 }
 
 title{
@@ -31,5 +32,14 @@ title{
     background-color: #1029cf71;
   }
 
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-align: center;
+  }
   
   
