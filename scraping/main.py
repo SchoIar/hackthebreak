@@ -9,4 +9,5 @@ def read_json(filename='jobs.json'):
     with open(filename, 'r') as file:
         return json.load(file)
 
-print(read_json('jobs.json'))
+
+print(read_json())
