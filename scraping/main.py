@@ -30,7 +30,7 @@ def searchJobs(numberOfSearches, keywordChosen):
     jobs = api.search_jobs(keywordChosen, remote = True, limit = numberOfSearches, offset = 1)
     for job in jobs:
         title = job['title']
-        jobID = job['dashEntityUrn'].split(':')[-1]
+        jobID = job['dashEntityUrn'].split(':')[-1] 
         #jobDetails = api.get_job(jobID)
         jobLink = f'https://www.linkedin.com/jobs/view/{jobID}/'
         job = {

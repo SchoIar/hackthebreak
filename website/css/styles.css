@@ -1,7 +1,11 @@
 body{
-    color:antiquewhite;
+    color:black;
     text-align: center;
     margin: 0.5;
     font-family:'Times New Roman', Times, serif;
 
+}
+
+title{
+    text-align:center;
 }
