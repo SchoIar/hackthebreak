@@ -9,13 +9,20 @@ def read_json(filename='jobs.json'):
     with open(filename, 'r') as file:
         return json.load(file)
 
-def write_json(data,filename='jobs.json'):
-    with open(filename, 'w') as file:
-        compiledData = read_json()
-        compiledData["job-list"].append((data))
-        json.dump(compiledData, file)
+def write_json(newData):
+    with open('jobs.json', 'r+') as file:
+        data = read_json()
+        data['job-list'].append(newData)
+        json.dump(data, file)
 
+jobPost = {\
+"Job title":"Software Engineer",
+"Compensation":"100k/yr",
+"Tech stack":"Python, Bash",
+"Location":"Online",
+"Link":"Indeed.com/mylin"
+    }
+     
+write_json(jobPost)
 
-write_json()
-print(read_json())
 
