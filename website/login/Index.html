@@ -8,13 +8,17 @@
 <body>
 	<h1>Login</h1>
 	<form method="POST">
-		Username:
-		<input type="text" name="name">
-		<br>
-		Password:
-		<input type="password" name="password">
-		<br>
-		<input type="submit" name="submit" value="Login">
+
+		<label for="email">Email Address</label>
+		<input type="email" class="form-control" id="email" name="email" placeholder="Enter email" align="center" />
+
+
+		<label for="password">Password</label>
+		<input type="password" class="form-control" id="password" name="password" placeholder="Enter password" align="center" />
+
+
+
+		<button type="submit" class="btn btn-primary">Login</button>
 	</form>
 </body>
 
