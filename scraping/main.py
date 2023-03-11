@@ -27,24 +27,33 @@ def write_json(newData):
         json.dump(data, file)
 
 def searchJobs(numberOfSearches, keywordChosen, offsetNumber):
-    jobs = api.search_jobs(keywordChosen, remote = True, limit = numberOfSearches, offset = offsetNumber)
+    jobs = api.search_jobs(keywordChosen, remote = 1, limit = \
+                           numberOfSearches, offset = offsetNumber)
     for job in jobs:
         title = job['title']
         jobID = job['dashEntityUrn'].split(':')[-1] 
+        location = job['formattedLocation']
         #jobDetails = api.get_job(jobID)
         jobLink = f'https://www.linkedin.com/jobs/view/{jobID}/'
         job = {
             "Job title":title,
-            "Job link":jobLink
+            "Job link":jobLink,
+            "Location":location
         }
-        if(title.lower().find('software') == True or title.lower().find('engineer') == True or title.lower().find('qa') == True or title.lower().find('developer') == True):
-            write_json(job)
-        else:
-            print(title)
-            write_json(job)
+        print(f"{title} : {jobID} : {location}")
+        write_json(job)
     return True
 
-for i in range(1,101):  
+for i in range(11,101):  
     searchJobs(1, "Software Developer", i)
+    time.sleep(1*random.random()+random.randint(1,5))
+    searchJobs(1, "Software Engineer", i)
+    time.sleep(1*random.random()+random.randint(1,5))
+    searchJobs(1, "Software Intern", i)
+    searchJobs(1, "SDET", i)
+    time.sleep(1*random.random()+random.randint(1,5))
+    searchJobs(1, "Software Co-op", i)
+    time.sleep(1*random.random()+random.randint(1,5))
+    searchJobs(1, "Junior Developer", i)
     time.sleep(1*random.random()+random.randint(1,5))
 #assert(searchJobs(3, "Software Developer") == True)
