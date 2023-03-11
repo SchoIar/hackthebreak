@@ -7,6 +7,7 @@ import threading
 import json
 import re
 import os
+import time
 
 class JobServerHandler(socketserver.StreamRequestHandler):
 
@@ -17,6 +18,7 @@ class JobServerHandler(socketserver.StreamRequestHandler):
         #creates a list of the optional headers included in the request
         OptionalHeaders = ""
 
+        print(Header)
         #creates a varaible to store each line as it is read 
         line = self.rfile.readline().decode()
 
@@ -27,13 +29,15 @@ class JobServerHandler(socketserver.StreamRequestHandler):
             #reads the next line
             line = self.rfile.readline().decode()
 
-        #print(OptionalHeaders)
+        print(OptionalHeaders)
+
+        print("response findings: \n")
 
         #creates a variable to store the content of the request and sets it to ""
         Content = ""
 
         #attempts to find the content length of the any attached content
-        contentLengths = re.findall(r'^Content-Length: (\d*)$', OptionalHeaders)
+        contentLengths = re.findall(r'Content-Length: (\d*)', OptionalHeaders)
 
         if(len(contentLengths) > 0):
             #reads the first occurenct of content length and converts it to an int for processing
@@ -44,37 +48,60 @@ class JobServerHandler(socketserver.StreamRequestHandler):
             #reads the content attached to the http request
             Content = self.rfile.read(contentLength).decode()
 
+            print(Content)
+
         else:
             print("no content attached")
 
         #reads the path the request is attempting to get from
-        path = "." + re.findall(r'^.* (.*) ', Header)[0]
+        path = re.findall(r'^.* (.*) ', Header)[0]
 
         #checks if this is a get request
         if(Header[0:3] == "GET"):
             #checks that the path is not an icon request
-            if(path != "./favicon.ico"):
+            if(path != "/favicon.ico"):
                 #prints the path
                 print(path)
 
-                #checks if an HTML file exists at that location
-                if(os.path.isfile(path + "\Index.htm")):
-                    #opens the found html file
-                    HTMLfile  = open(path + "\Index.htm")
+                #checks if the path ends with .css or .js
+                if(path[-4:] != ".css" and path[-3:] != ".js"):
+                    #adds /index.html to the end of the file
+                    path = path + "/Index.html"
 
-                    #reads teh html from the file
-                    HTMLReturn = HTMLfile.read()
+                #checks if an HTML file exists at that location
+                if(os.path.isfile("./website" + path)):
+
+                    #opens the found html file
+                    returnfile  = open("./website" + path)
+
+                    #reads teh content from the file
+                    ContentReturn = returnfile.read()
 
                     #closes the html file
-                    HTMLfile.close()
+                    returnfile.close()
+
+                    returnContentType = ""
+
+                    if(path[-4:] == ".css"):
+                        returnContentType = "Content-Type: text/css\r\n"
+
+                    elif(path[-3:] == ".js"):
+
+                        returnContentType = "Content-Type: application/javascript\r\n"
+
+                    else:
+                        returnContentType = "Content-Type: text/html\r\n"
 
                     #writes the reutrn header (200 since the file was found marks the return as html and the length as the length of the text)
-                    returnHeader = "HTTP/1.1 200 success\r\nContent-Type: text/html\r\nContent-Length: " + str(len(HTMLReturn))
+                    returnHeader = "HTTP/1.1 200 success\r\n" + returnContentType + "Content-Length: " + str(len(ContentReturn))
+
+                    print("replaing with header:\n" + returnHeader)
 
                     #writes the html return
-                    self.wfile.write((returnHeader + HTMLReturn).encode())
+                    self.wfile.write((returnHeader + "\r\n\r\n" + ContentReturn).encode())
 
                 else:
+                    print("file at " + path + " not found")
                     #writes a return
                     self.wfile.write(b"HTTP/1.1 404 file not found\r\n\r\nFile Not Found")
 
@@ -92,13 +119,36 @@ class JobServer(socketserver.TCPServer):
     #stores a link to the database program for users and jobData
     Database = ""
 
+    #stores the thread the server is running on
+    ServerThread = ""
+
+    def startServer(self):
+        #creates a thread for the server to run on
+        ServerThread = threading.Thread(target=self.serve_forever, name="ServerThreadName")
+
+        ServerThread.start()
+
+    def stopServer(self):
+        #stops the current server loop
+        self.shutdown()
+
+        #waits for the server thread to close
+        self.ServerThread.join
+
+        #finializes the server close
+        self.server_close()
+
+
 if(__name__ == "__main__"):
 
     srvr = JobServer(("localhost", 8080), JobServerHandler)
 
+    srvr.startServer()
+
     try:
-        srvr.serve_forever()
+        while(True):
+            time.sleep(1)
     except:
         pass
 
-    srvr.server_close()
+    srvr.stopServer()
