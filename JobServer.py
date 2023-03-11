@@ -130,9 +130,14 @@ class JobServer(socketserver.TCPServer):
     #stores the thread the server is running on
     ServerThread = ""
 
+    def runServer(self):
+        self.serve_forever()
+
+        print("server closed")
+
     def startServer(self):
         #creates a thread for the server to run on
-        ServerThread = threading.Thread(target=self.serve_forever, name="ServerThreadName")
+        ServerThread = threading.Thread(target=self.runServer, name="ServerThreadName")
 
         ServerThread.start()
 
@@ -154,8 +159,7 @@ if(__name__ == "__main__"):
     srvr.startServer()
 
     try:
-        while(True):
-            time.sleep(1)
+        time.sleep(10000)
     except:
         pass
 
