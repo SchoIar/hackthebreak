@@ -6,8 +6,8 @@ from linkedin_api import Linkedin
 from dotenv import load_dotenv
 
 class Scrape():
-    def __init__(self, api):
-        self.api = api
+    def __init__(self):
+        pass
         
     def read_json(self, filename='jobs.json'):
         with open(filename, 'r') as file:
@@ -54,7 +54,7 @@ if(__name__ == "__main__"):
     with open('jobs.json', 'w') as file:
         json.dump(data, file)
 
-    scraper = Scrape(api)
+    scraper = Scrape()
     scraper.findSWEJobs(api)
     
     
