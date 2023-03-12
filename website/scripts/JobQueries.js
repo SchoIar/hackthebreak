@@ -16,17 +16,30 @@ function QueryJob(keywords, location){
 }
 
 function handleQueryResponse(result){
-    console.log(`json result: ${result.yourMom}`);
+    console.log(`json result: ${JSON.stringify(result)}`);
+
+    mainDiv = document.getElementsByClassName("searchResults")[1];
+
+    console.log(mainDiv);
+
+    mainDiv.innerHTML = ''
+
+    for (var i = 0; i < result.length; i++){
+        var jobHTML = `<p>${result[i].title}, ${result[i].location}, ${result[i].link}</p>`;
+        mainDiv.innerHTML = mainDiv.innerHTML.concat(jobHTML);
+    }
+
+    console.log(mainDiv.innerHTML);
 }
 
 
 function startQuery(){
-    //keywords = $("#Search").Text;
-    //location = $("#Location").Text;
+    //keywords = document.getElementById("Search").value;
+    //location = document.getElementById("Location").value;
 
     //console.log(`Searching for ${keywords} with location ${location} at url ${QueryIP}`);
 
-    QueryJob("work", "Canada");
+    QueryJob("a", "b");
 }
 
     

@@ -8,7 +8,7 @@ import json
 import re
 import os
 import time
-#import db.SQLManager
+import db.SQLManager
 
 class JobServerHandler(socketserver.StreamRequestHandler):
 
@@ -125,16 +125,111 @@ class JobServerHandler(socketserver.StreamRequestHandler):
 
         #checks if this is a posts request    
         elif(Header[0:4] == "POST"):
+            #checks if the path is for the job listings
             if(path == "/JobQuery"):
-                self.wfile.write(b"HTTP/1.1 200 success\r\n" \
-                            + b"Content-Type: application/json\r\n"\
-                            + b"Content-Length: 19\r\n\r\n"\
-                            + b'{"yourMom":"Large"}')
+                #reads the json from the request
+                jsoncontent = json.loads(Content)
+
+                #finds all teh job ids that match the search conditions
+                jobIDs = searchJobs(jsoncontent["keywords"], jsoncontent["location"], self.server.Database)
+
+                print("num of matchs: " + str(len(jobIDs)))
+
+                #creates an empty job list
+                Jobs = []
+
+                #for each job in the jobIDs list
+                for j in jobIDs:
+                    #creates a json job entry for the job from the job list
+                    Jobs.append(generatejob(j, self.server.Database))
 
 
+                #converts the jobs list into a json string
+                jsonOut = json.dumps(Jobs)
+
+                print("raw json:\n" + jsonOut)
+
+                binout = b"HTTP/1.1 200 success\r\n"
+                binout += b"Content-Type: application/json\r\n"
+                binout += b"Content-Length: " + str(len(jsonOut)).encode() + b"\r\n\r\n"
+                binout += jsonOut.encode()
+
+                self.wfile.write(binout)
+                
+
+            #checks if the request is for the userdata
+            elif(path == "/userdata"):
+                #reads the content of the request and converts it to a json
+                jsonContent = json.loads(Content)
+
+                #creates a json to store whether or not the user exists
+                outputJson = {}
+
+                #records whether or not that user exists and stores it in teh database
+                outputJson["exists"] = self.server.Database.userExists(jsonContent["username"])
+
+                #checks if this account exists
+                if(outputJson["exists"]):
+                    #checks if the password matches whats in the database
+                    if(jsonContent["password"] == self.server.Database.userInfo(jsonContent["username"], "pw")):
+
+                        outputJson["exp"] = self.server.Database.userInfo(jsonContent["username"], "xp")
+
+                    else:
+                        #writes that permission was denied
+                        self.wfile.write(b"HTTP/1.1 403 permission denied\r\n")
+
+                        return
+
+                else:
+                    #sets the other values to empty strings/0
+                    outputJson["streak"] = -1
+                    outputJson["exp"] = -1
+                    outputJson["lastApp"] = "2000-01-01"
+
+                #dumps the dictionary to a raw json string
+                rawOutJson = json.dumps(outputJson).encode()
+
+                print("raw json:\n" + rawOutJson)
+
+                #sets up the output data
+                binoutput = b'HTTP/1.1 200 success\r\n'
+                binoutput += b'Content-Type: Appliation/json\r\n'
+                binoutput += b'Content-Length: ' + str(len(rawOutJson)).encode() + b'\r\n\r\n'
+                binoutput += rawOutJson
+
+                #sends the output data
+                self.wfile.write(binoutput)
 
 
-        #self.wfile.write(b"HTTP/1.1 200 success\r\n\r\nthis worked?")
+                    
+#searchs all the jobs and returns a list of jobs that matc  
+def searchJobs(keywords, location, database):
+    matchingJobs = []
+
+    for job in database.getAllJobs():
+        #checks if the job title contains the keywords
+        if(keywords in job[1]):
+            #checks if the job location contains the location value
+            if(location in database.getJobInfo(job[0], "location")):
+                #adds the job id to the results
+                matchingJobs.append(job[0])
+    
+    return matchingJobs
+
+def generatejob(id, database):
+
+    #creates an empty dictionary fro the job
+    returnJob = {}
+
+    #attaches the data within the dictionary
+    returnJob["link"] = database.getJobInfo(id, "link")
+    returnJob["title"] = database.getJobInfo(id, "title")
+    returnJob["location"] = database.getJobInfo(id, "location")
+
+    #returns the dictionary
+    return returnJob
+
 
 class JobServer(socketserver.TCPServer):
     #stores a link to the database program for users and jobData
@@ -153,7 +248,7 @@ class JobServer(socketserver.TCPServer):
         ServerThread = threading.Thread(target=self.runServer, name="ServerThreadName")
 
         #opens the mysql database
-        #self.Database = db.SQLManager.SQLManager
+        self.Database = db.SQLManager.SQLManager()
 
         #starts the thread
         ServerThread.start()
@@ -166,7 +261,7 @@ class JobServer(socketserver.TCPServer):
         self.ServerThread.join()
 
         #closes the mysql database
-        #self.Database.close()
+        self.Database.close()
 
         #finializes the server close
         self.server_close()
@@ -177,6 +272,8 @@ if(__name__ == "__main__"):
     srvr = JobServer(("localhost", 8080), JobServerHandler)
 
     srvr.startServer()
+
+    #print(srvr.Database.getAllJobs())
 
     try:
         time.sleep(10000)
