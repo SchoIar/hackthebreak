@@ -72,6 +72,51 @@ class SQLManager:
 		return self.cur.fetchall();
 		
 	###################################################
+	#           USER/SAVE RELATED FUNCTIONS           #
+	###################################################
+	
+	# See if user has job saved, returns 0 if no
+	# Please make sure isSaved is 1 before executing anything else
+	def isSaved(self, id, jobid):
+		stmt = "SELECT EXISTS(SELECT * FROM saved WHERE uid = %s AND jid = %s);"
+		return self.__fetch(stmt, (id, jobid))
+		
+	# Save a job to a user
+	def saveJob(self, id, jobid):
+		stmt = "INSERT IGNORE INTO saved (uid, jid) VALUES (%s, %s);"
+		self.__execute(stmt, (id, jobid))
+	
+	# Count number of jobs user has saved
+	def countJobs(self, id):
+		stmt = "SELECT COUNT(uid) FROM saved WHERE uid = %s;"
+		return self.__fetch(stmt, (id,))
+		
+	# Count number of jobs user has applied to
+	def countJobsAppled(self, id):
+		stmt = "SELECT COUNT(uid) FROM saved WHERE uid = %s AND applied = 1;"
+		return self.__fetch(stmt, (id,))
+		
+	# Count number of users who have applied to a job
+	def countUsersApplied(self, jobid):
+		stmt = "SELECT COUNT(jid) FROM saved WHERE jid = %s AND applied = 1;"
+		return self.__fetch(stmt, (jobid,))
+		
+	# Get info about a saved job. Options: applied, note
+	def getSavedInfo(self, id, jobid, o):
+		stmt = "SELECT ? FROM saved WHERE uid = %s AND jid = %s;".replace("?", o)
+		return self.__fetch(stmt, (id, jobid))
+		
+	# Save a new user note
+	def saveNote(self, id, jobid, note):
+		stmt = "UPDATE saved SET notes = %s WHERE uid = %s AND jid = %s;"
+		self.__execute(stmt, (note, id, jobid))
+		
+	# Apply to a job
+	def applyTo(self, id, jobid):
+		stmt = "UPDATE saved SET applied = 1 WHERE uid = %s AND jid = %s;"
+		self.__execute(stmt, (id, jobid))
+		
+	###################################################
 	#                UTILITY + PRIVATE                #
 	###################################################
         
