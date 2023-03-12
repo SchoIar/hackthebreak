@@ -6,7 +6,6 @@ from linkedin_api import Linkedin
 from dotenv import load_dotenv
 import sys
 
-sys.path.insert
 
 load_dotenv()
 Password = os.getenv('PASSWORD')
