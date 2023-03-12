@@ -108,7 +108,7 @@ function updateUserFields(){
     dataFields.username.innerHTML = "user: " + userData.username;
 }
 
-function addExpForApp(){
+function addExpForApp(jobID){
     //gets the username fromt eh cookies
     var username = getUsername();
 
@@ -125,10 +125,12 @@ function addExpForApp(){
             $.ajax({
                 type: "POST",
                 url: xpID,
-                data: JSON.stringify({ "username":username, "password":password, "xp":20}),
+                data: JSON.stringify({ "username":username, "password":password, "xp":20, "id":jobID}),
                 contentType: "application/json",
                 success: function (result) {
                     console.log("xp added");
+
+                    updateUserData();
                 },
                 error: function (result, status) {
                     console.log("something went wrong!");

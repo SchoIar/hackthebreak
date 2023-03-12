@@ -229,16 +229,27 @@ class JobServerHandler(socketserver.StreamRequestHandler):
                 jsonContent = json.loads(Content)
 
                 if(jsonContent["password"] == self.server.Database.getUserInfo(jsonContent["username"], "pw")):
-                    #addds the specifed amount of xp to the user account
-                    self.server.Database.addXp(jsonContent["username"], jsonContent["xp"])
+                    if(self.server.Database.isSaved(jsonContent["username"], jsonContent["id"])):
 
-                    #reads the date the user last applied for a job
-                    datestr = self.server.Database.getUserInfo(jsonContent["username"], "lastapp")
+                        pass
 
-                    #checks if the date is not the current date
-                    if(not isDateCurrent(datestr)):
-                        #increase the length of the streak and resets the lastapp day
-                        self.server.Database.increaseStreak(jsonContent["username"])
+                    else:
+                        #saves the job with the current user
+                        self.server.Database.saveJob(jsonContent["username"], jsonContent["id"])
+
+                        #saves the job with the current user
+                        self.server.Database.applyTo(jsonContent["username"], jsonContent["id"])
+
+                        #addds the specifed amount of xp to the user account
+                        self.server.Database.addXp(jsonContent["username"], jsonContent["xp"])
+
+                        #reads the date the user last applied for a job
+                        datestr = self.server.Database.getUserInfo(jsonContent["username"], "lastapp")
+
+                        #checks if the date is not the current date
+                        if(not isDateCurrent(datestr)):
+                            #increase the length of the streak and resets the lastapp day
+                            self.server.Database.increaseStreak(jsonContent["username"])
 
                     #writes the the xp was added successfully
                     self.wfile.write(b'HTTP/1.1 200 success')
@@ -273,6 +284,7 @@ def generatejob(id, database):
     returnJob["link"] = database.getJobInfo(id, "link")
     returnJob["title"] = database.getJobInfo(id, "title")
     returnJob["location"] = database.getJobInfo(id, "location")
+    returnJob["id"] = id
 
     #returns the dictionary
     return returnJob
