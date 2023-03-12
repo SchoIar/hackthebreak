@@ -4,6 +4,7 @@ import time
 import random
 from linkedin_api import Linkedin
 from dotenv import load_dotenv
+
 load_dotenv()
 Password = os.getenv('PASSWORD')
 Email = os.getenv('EMAIL')
@@ -13,7 +14,6 @@ api = Linkedin(Email, Password)
 data = {"job-list": [{}]}
 with open('jobs.json', 'w') as file:
     json.dump(data, file)
-
 
 def read_json(filename='jobs.json'):
     with open(filename, 'r') as file:
@@ -57,3 +57,6 @@ for i in range(11,101):
     searchJobs(1, "Junior Developer", i)
     time.sleep(1*random.random()+random.randint(1,5))
 #assert(searchJobs(3, "Software Developer") == True)
+
+
+
