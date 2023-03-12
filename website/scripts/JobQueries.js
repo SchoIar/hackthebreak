@@ -36,8 +36,8 @@ function handleQueryResponse(result){
 function startQuery(){
     inputFields = document.getElementsByClassName("inputField");
 
-    keywords = inputFields.Search.value;
-    location = inputFields.Location.value;
+    let keywords = inputFields.Search.value;
+    let location = inputFields.location.value;
 
     console.log(`Searching for ${keywords} with location ${location} at url ${QueryIP}`);
 
