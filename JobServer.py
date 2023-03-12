@@ -122,6 +122,14 @@ class JobServerHandler(socketserver.StreamRequestHandler):
                             + b"Content-Type: image/x-icon\r\nContent-Length: " + str(len(binIcon)).encode()\
                             +b"\r\n\r\n" + binIcon)
 
+        #checks if this is a posts request    
+        elif(Header[0:4] == "POST"):
+            if(path == "/JobQuery"):
+                self.wfile.write(b"HTTP/1.1 200 success\r\n" \
+                            + b"Content-Type: application/json\r\n"\
+                            + b"Content-Length: 19\r\n\r\n"\
+                            + b'{"yourMom": "Large"}')
+
 
 
 

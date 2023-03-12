@@ -2,10 +2,16 @@
     <head>
         <title>searchResults</title>
         <link rel="stylesheet" href="../css/styles.css">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>  
+        <script src="/scripts/JobQueries.js"></script>
     </head>
     <body>
         <!-- some headers and such -->
-        <div class="searchButton">
+        <p id="Location" class="inputField">Canada</p>
+
+        <p id="Search" class="inputField">SomeInputs</p>
+
+        <div onclick="startQuery()" class="searchButton">
             <p>search</p>
         </div>
         <div class="searchResults">
