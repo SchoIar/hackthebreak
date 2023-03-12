@@ -1,13 +1,13 @@
 import os
 import random
 import json
-import connector.mysql.connector
+import mysql.connector
 
 class SQLManager:
 	def __init__(self):
 		with open('mysql.json') as mysql_info:
 			config = json.load(mysql_info)
-		self.cnx = connector.mysql.connector.connect(**config)
+		self.cnx = mysql.connector.connect(**config)
 		self.cur = self.cnx.cursor()
 
 	# Also use for passwords
