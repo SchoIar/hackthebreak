@@ -25,7 +25,7 @@ function handleQueryResponse(result){
     mainDiv.innerHTML = ''
 
     for (var i = 0; i < result.length; i++){
-        var jobHTML = `<p>${result[i].title}, ${result[i].location}, ${result[i].link}</p><p id="${result[i].id}" onclick="addExpForApp('${result[i].id}')">Apply</p>`;
+        var jobHTML = `<p>${result[i].title}, ${result[i].location}, <a href="${result[i].link}">${result[i].link}</a></p><p id="${result[i].id}" onclick="addExpForApp('${result[i].id}')">Apply</p>`;
         mainDiv.innerHTML = mainDiv.innerHTML.concat(jobHTML);
     }
 
