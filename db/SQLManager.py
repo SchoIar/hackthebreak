@@ -10,7 +10,8 @@ class SQLManager:
 		self.cnx = mysql.connector.connect(**config)
 		self.cur = self.cnx.cursor()
 
-	# Also use for passwords
+	# Creates a new user in the database. Can also be used to change password
+	# id is the username, and pw is the user's password
 	def newUser(self, id, pw):
 		info = (id, pw, pw)
 		stmt = "INSERT INTO users (id, pw) VALUES (%s, %s) ON DUPLICATE KEY UPDATE pw = %s;"
@@ -24,14 +25,14 @@ class SQLManager:
 		self.cur.execute(stmt, info)
 		return self.cur.fetchone()[0]
 		
-	# Gets a user info. Options are id, pw, xp, streak, lastlogin
+	# Gets a user info. Options are id, pw, xp, streak, lastapp
 	def getUserInfo(self, id, o):
 		info = (id,)
 		stmt = "SELECT ? FROM users WHERE id = %s;".replace("?", o)
 		self.cur.execute(stmt, info)
 		return self.cur.fetchone()[0]
 		
-	# Updates a user's exp
+	# Increments a user's exp by certain amount
 	def addXp(self, id, add):
 		info = (add, id)
 		stmt = "UPDATE users SET xp = xp + %s WHERE id = %s"
@@ -45,7 +46,7 @@ class SQLManager:
 		self.cur.execute(stmt, info)
 		self.cnx.commit()
 	
-	# Increases a user's streak and sets the date to cur date
+	# Increments a user's streak and sets the date to cur date
 	def increaseStreak(self, id):
 		info = (id,)
 		stmt1 = "UPDATE users SET streak = streak + 1 WHERE id = %s;"
