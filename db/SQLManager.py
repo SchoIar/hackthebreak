@@ -17,7 +17,7 @@ class SQLManager:
 	# Creates a new user in the database. Can also be used to change password
 	# id is the username, and pw is the user's password
 	def newUser(self, id, pw):
-		stmt = "INSERT INTO users (id, pw) VALUES (%s, %s) ON DUPLICATE KEY UPDATE pw = %s;"
+		stmt = "INSERT INTO users (id, pw, lastapp) VALUES (%s, %s, DATE_SUB(current_date(), INTERVAL 1 DAY)) ON DUPLICATE KEY UPDATE pw = %s;"
 		self.__execute(stmt, (id, pw, pw))
 		
 	# Returns 1 if user exists, 0 if not
