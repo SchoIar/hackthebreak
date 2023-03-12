@@ -116,6 +116,12 @@ class SQLManager:
 		stmt = "UPDATE saved SET applied = 1 WHERE uid = %s AND jid = %s;"
 		self.__execute(stmt, (id, jobid))
 		
+	# No longer interested in a job
+	def unsaveJob(self, id, jobid):
+		stmt = "DELETE FROM saved WHERE uid = %s AND jid = %s;"
+		self.__execute(stmt, (id, jobid))
+	
+		
 	###################################################
 	#                UTILITY + PRIVATE                #
 	###################################################
