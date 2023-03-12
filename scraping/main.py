@@ -4,7 +4,6 @@ import time
 import random
 from linkedin_api import Linkedin
 from dotenv import load_dotenv
-import sys
 
 class Scrape():
     def __init__(self, api):
