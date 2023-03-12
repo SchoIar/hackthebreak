@@ -3,6 +3,7 @@
 <head>
 	<title>Login</title>
 	<link rel="stylesheet" href="../css/styles.css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="/scripts/loginHandler.js"></script>
 </head>
 
@@ -15,13 +16,15 @@
 
 	</div>
 	<div class="topRight">LOGIN</div>
-	<form method="POST">
+	
 
-		<div class="UserData">
-			<p id="username" class="userInfo"></p>
-			<p id="xp" class="userInfo"></p>
-			<p id="streak" class="userInfo"></p>
-		</div>
+	<div class="UserData">
+		<p id="username" class="userInfo"></p>
+		<p id="xp" class="userInfo"></p>
+		<p id="streak" class="userInfo"></p>
+	</div>
+
+	<form method="POST">
 
 		<label for="email">Email Address</label>
 		<input type="email" class="form-control" id="email" name="email" placeholder="Enter email" align="center" />
@@ -33,7 +36,7 @@
 
 
 
-		<button type="submit" class="btn btn-primary">Login</button>
+		<div onclick="newUserInfoButton();"type="submit" class="btn btn-primary">Login</div>
 	</form>
 </body>
 <div class="footer">

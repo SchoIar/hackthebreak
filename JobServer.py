@@ -9,6 +9,8 @@ import re
 import os
 import time
 import db.SQLManager
+from datetime import date
+from datetime import timedelta
 
 class JobServerHandler(socketserver.StreamRequestHandler):
 
@@ -171,9 +173,20 @@ class JobServerHandler(socketserver.StreamRequestHandler):
                 #checks if this account exists
                 if(outputJson["exists"]):
                     #checks if the password matches whats in the database
-                    if(jsonContent["password"] == self.server.Database.userInfo(jsonContent["username"], "pw")):
+                    if(jsonContent["password"] == self.server.Database.getUserInfo(jsonContent["username"], "pw")):
+                        #reads the xp, last application date, and username from database
+                        outputJson["xp"] = self.server.Database.getUserInfo(jsonContent["username"], "xp")
+                        outputJson["username"] = jsonContent["username"]
+                        outputJson["lastApp"] = str(self.server.Database.getUserInfo(jsonContent["username"], "lastapp"))
 
-                        outputJson["exp"] = self.server.Database.userInfo(jsonContent["username"], "xp")
+                        if(isDateValid(self.server.Database.getUserInfo(jsonContent["username"], "lastapp"))):
+                            outputJson["streak"] = self.server.Database.getUserInfo(jsonContent["username"], "streak")
+                        else:
+                            #since it has been too long since their last login resets streak
+                            self.server.Database.removeStreak(outputJson["username"])
+                            #returns streak 0
+                            outputJson["streak"] = 0
+
 
                     else:
                         #writes that permission was denied
@@ -182,15 +195,25 @@ class JobServerHandler(socketserver.StreamRequestHandler):
                         return
 
                 else:
-                    #sets the other values to empty strings/0
-                    outputJson["streak"] = -1
-                    outputJson["exp"] = -1
-                    outputJson["lastApp"] = "2000-01-01"
+                    if(jsonContent["create"]):
+                        self.server.Database.newUser(jsonContent["username"], jsonContent["password"])
+
+                        outputJson["streak"] = 0
+                        outputJson["xp"] = 0
+                        outputJson["username"] = jsonContent["username"]
+                        outputJson["lastApp"] = str(self.server.Database.getUserInfo(jsonContent["username"], "lastapp"))
+
+                    else: 
+                        #sets the other values to empty strings/0
+                        outputJson["streak"] = -1
+                        outputJson["xp"] = -1
+                        outputJson["lastApp"] = "2000-01-01"
+                        outputJson["username"] = ""
 
                 #dumps the dictionary to a raw json string
                 rawOutJson = json.dumps(outputJson).encode()
 
-                print("raw json:\n" + rawOutJson)
+                print("raw json:\n" + rawOutJson.decode())
 
                 #sets up the output data
                 binoutput = b'HTTP/1.1 200 success\r\n'
@@ -200,6 +223,30 @@ class JobServerHandler(socketserver.StreamRequestHandler):
 
                 #sends the output data
                 self.wfile.write(binoutput)
+
+            elif(path == "/increaseXP"):
+                 #reads the content of the request and converts it to a json
+                jsonContent = json.loads(Content)
+
+                if(jsonContent["password"] == self.server.Database.getUserInfo(jsonContent["username"], "pw")):
+                    #addds the specifed amount of xp to the user account
+                    self.server.Database.addXp(jsonContent["username"], jsonContent["xp"])
+
+                    #reads the date the user last applied for a job
+                    datestr = self.server.Database.getUserInfo(jsonContent["username"], "lastapp")
+
+                    #checks if the date is not the current date
+                    if(not isDateCurrent(datestr)):
+                        #increase the length of the streak and resets the lastapp day
+                        self.server.Database.increaseStreak(jsonContent["username"])
+
+                    #writes the the xp was added successfully
+                    self.wfile.write(b'HTTP/1.1 200 success')
+
+                else:
+                    
+                    #write that premission was denied
+                    self.wfile.write(b'HTTP/1.1 403 premission denied')
 
 
                     
@@ -229,6 +276,33 @@ def generatejob(id, database):
 
     #returns the dictionary
     return returnJob
+
+def isDateValid(dbDate):
+    if(dbDate != None):
+
+        return(date.today() > (dbDate + timedelta(days=1)))
+        """print("testing date: " + dbDate)
+        dbDate = int(dbDate.replace('-',''))
+        today = int(str(date.today()).replace('-',''))
+        if(today + 1 > dbDate):
+            return True
+        else:
+            return False"""
+    else:
+        return False
+    
+def isDateCurrent(dbDate):
+    if(dbDate != None):
+        return (date.today() == dbDate)
+        """print("testing date: " + dbDate)
+        dbDate = int(dbDate.replace('-',''))
+        today = int(str(date.today()).replace('-',''))
+        if(today == dbDate):
+            return True
+        else:
+            return False"""
+    else:
+        return True
 
 
 class JobServer(socketserver.TCPServer):
