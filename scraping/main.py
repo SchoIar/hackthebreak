@@ -46,19 +46,11 @@ def searchJobs(numberOfSearches, keywordChosen, offsetNumber):
         write_json(job)
     return True
 
-for i in range(11,101):  
-    searchJobs(1, "Software Developer", i)
-    time.sleep(1*random.random()+random.randint(1,5))
-    searchJobs(1, "Software Engineer", i)
-    time.sleep(1*random.random()+random.randint(1,5))
-    searchJobs(1, "Software Intern", i)
-    searchJobs(1, "SDET", i)
-    time.sleep(1*random.random()+random.randint(1,5))
-    searchJobs(1, "Software Co-op", i)
-    time.sleep(1*random.random()+random.randint(1,5))
-    searchJobs(1, "Junior Developer", i)
-    time.sleep(1*random.random()+random.randint(1,5))
-#assert(searchJobs(3, "Software Developer") == True)
-
-
-
+listOfJobs = ["Software Developer","Software Engineer", "Software Intern","SDET","Developer Intern","Software co-op","Junior Developer"] 
+for i in range(11,101):
+    
+    for element in listOfJobs:
+        searchJobs(1, element, i)
+        print('Done')
+        time.sleep(1*random.randint(1,5)+2)
+   
