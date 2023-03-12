@@ -21,8 +21,8 @@ def searchJobs(numberOfSearches, keywordChosen, offsetNumber):
         jobID = job['dashEntityUrn'].split(':')[-1] 
         location = job['formattedLocation']
         jobLink = f'https://www.linkedin.com/jobs/view/{jobID}/'
-
-        sql.newJob(str(jobID), jobLink, title, location)
+    print(f'added {job}')
+    sql.newJob(str(jobID), jobLink, title, location)
         
     return True
 
