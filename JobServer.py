@@ -8,6 +8,7 @@ import json
 import re
 import os
 import time
+#import db.SQLManager
 
 class JobServerHandler(socketserver.StreamRequestHandler):
 
@@ -64,7 +65,7 @@ class JobServerHandler(socketserver.StreamRequestHandler):
                 print(path)
 
                 #checks if the path ends with .css or .js
-                if(path[-4:] != ".css" and path[-3:] != ".js"):
+                if(path[-4:] != ".css" and path[-3:] != ".js" and path[-4:] != ".jpg"):
                     #adds /index.html to the end of the file
                     path = path + "/Index.html"
 
@@ -72,7 +73,7 @@ class JobServerHandler(socketserver.StreamRequestHandler):
                 if(os.path.isfile("./website" + path)):
 
                     #opens the found html file
-                    returnfile  = open("./website" + path)
+                    returnfile  = open("./website" + path, mode="rb")
 
                     #reads teh content from the file
                     ContentReturn = returnfile.read()
@@ -89,6 +90,10 @@ class JobServerHandler(socketserver.StreamRequestHandler):
 
                         returnContentType = "Content-Type: application/javascript\r\n"
 
+                    elif(path[-4:] == ".jpg"):
+
+                        returnContentType = "Content-Type: image\jpeg"
+
                     else:
                         returnContentType = "Content-Type: text/html\r\n"
 
@@ -98,7 +103,7 @@ class JobServerHandler(socketserver.StreamRequestHandler):
                     print("replaing with header:\n" + returnHeader)
 
                     #writes the html return
-                    self.wfile.write((returnHeader + "\r\n\r\n" + ContentReturn).encode())
+                    self.wfile.write((returnHeader + "\r\n\r\n").encode() + ContentReturn)
 
                 else:
                     print("file at " + path + " not found")
@@ -117,6 +122,14 @@ class JobServerHandler(socketserver.StreamRequestHandler):
                 self.wfile.write(b"HTTP/1.1 200 success\r\n" \
                             + b"Content-Type: image/x-icon\r\nContent-Length: " + str(len(binIcon)).encode()\
                             +b"\r\n\r\n" + binIcon)
+
+        #checks if this is a posts request    
+        elif(Header[0:4] == "POST"):
+            if(path == "/JobQuery"):
+                self.wfile.write(b"HTTP/1.1 200 success\r\n" \
+                            + b"Content-Type: application/json\r\n"\
+                            + b"Content-Length: 19\r\n\r\n"\
+                            + b'{"yourMom":"Large"}')
 
 
 
@@ -139,6 +152,10 @@ class JobServer(socketserver.TCPServer):
         #creates a thread for the server to run on
         ServerThread = threading.Thread(target=self.runServer, name="ServerThreadName")
 
+        #opens the mysql database
+        #self.Database = db.SQLManager.SQLManager
+
+        #starts the thread
         ServerThread.start()
 
     def stopServer(self):
@@ -146,7 +163,10 @@ class JobServer(socketserver.TCPServer):
         self.shutdown()
 
         #waits for the server thread to close
-        self.ServerThread.join
+        self.ServerThread.join()
+
+        #closes the mysql database
+        #self.Database.close()
 
         #finializes the server close
         self.server_close()

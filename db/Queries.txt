@@ -1,0 +1,17 @@
+DB: 149.56.242.137:3306
+user: hacker
+pw: HackTheBreak2023
+
+New user: INSERT IGNORE INTO users(name, pw) VALUES(?, ?);
+Check user: SELECT EXISTS(SELECT * FROM users WHERE id = ?);
+Check pwd: SELECT pw FROM users WHERE id = ?;
+Get exp: SELECT xp FROM users WHERE id = ?;
+Get streak: SELECT streak FROM users WHERE id = ?;
+
+New job: INSERT IGNORE INTO jobs(id, link) VALUES(?, ?);
+Get job link: SELECT link FROM jobs WHERE id = ?;
+
+Count number of jobs a user has applied to: SELECT COUNT(users.id) FROM saved WHERE users.id = ?;
+Count users that have applied to job id: SELECT COUNT(jobs.id) FROM saved WHERE jobs.id = ?;
+Get if user has applied to a job: SELECT applied FROM saved WHERE users.id = ? AND jobs.id = ?;
+Get notes about user and job id: SELECT notes FROM saved WHERE users.id = ? AND jobs.id = ?;

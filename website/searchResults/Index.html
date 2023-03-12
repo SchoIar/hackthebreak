@@ -2,11 +2,18 @@
     <head>
         <title>searchResults</title>
         <link rel="stylesheet" href="../css/styles.css">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>  
+        <script src="/scripts/JobQueries.js"></script>
+        <script src="/scripts/loginHandler.js"></script>
     </head>
     <body>
         <!-- some headers and such -->
-        <div class="searchButton">
-            <p>search</p>
+        <input type="search" id="Location" class="inputField" name="location" placeholder="Search Location..." align="center" />
+	<br>
+        <input type="search" id="Search" class="inputField" name="search" placeholder="Search Jobs..." align="center" />
+
+        <div onclick="startQuery()" class="searchButton">
+            <button type="submit" class ="searchButton">Search</button>
         </div>
         <div class="searchResults">
 
