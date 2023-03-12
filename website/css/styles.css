@@ -42,4 +42,11 @@ title{
     text-align: center;
   }
   
-  
+  .topRight{
+    position: absolute;
+    right: 3%;
+    top: 3%;
+    font-size: 20px; 
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif
+  }
