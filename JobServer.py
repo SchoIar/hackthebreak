@@ -110,7 +110,7 @@ class JobServerHandler(socketserver.StreamRequestHandler):
                 else:
                     print("file at " + path + " not found")
                     #writes a return
-                    self.wfile.write(b"HTTP/1.1 404 file not found\r\n\r\nFile Not Found")
+                    self.wfile.write(b'HTTP/1.1 404 file not found\r\n\r\nFile Not Found')
 
             else:
                 print("icon request")
@@ -190,7 +190,7 @@ class JobServerHandler(socketserver.StreamRequestHandler):
 
                     else:
                         #writes that permission was denied
-                        self.wfile.write(b"HTTP/1.1 403 permission denied\r\n")
+                        self.wfile.write(b'HTTP/1.1 403 permission denied\r\n')
 
                         return
 

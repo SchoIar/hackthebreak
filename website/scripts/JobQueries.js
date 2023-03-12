@@ -34,12 +34,14 @@ function handleQueryResponse(result){
 
 
 function startQuery(){
-    //keywords = document.getElementById("Search").value;
-    //location = document.getElementById("Location").value;
+    inputFields = document.getElementsByClassName("inputField");
 
-    //console.log(`Searching for ${keywords} with location ${location} at url ${QueryIP}`);
+    keywords = inputFields.Search.value;
+    location = inputFields.Location.value;
 
-    QueryJob("a", "b");
+    console.log(`Searching for ${keywords} with location ${location} at url ${QueryIP}`);
+
+    QueryJob(keywords, location);
 }
 
     
