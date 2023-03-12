@@ -66,6 +66,11 @@ class SQLManager:
 		stmt = "SELECT ? FROM jobs WHERE id = %s;".replace("?", o)
 		return self.__fetch(stmt, (id,))
 		
+	# Pull a list of every job and its title
+	def getAllJobs(self):
+		self.cur.execute("SELECT id, title FROM jobs;")
+		return self.cur.fetchall();
+		
 	###################################################
 	#                UTILITY + PRIVATE                #
 	###################################################

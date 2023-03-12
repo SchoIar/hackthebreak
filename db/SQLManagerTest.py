@@ -10,4 +10,6 @@ if __name__ == "__main__":
 	sql.addXp("test1", 100)
 	sql.removeStreak("test1")
 	sql.newJob(1111, "https://github.com", "Githubber", "Github")
+	sql.newJob(1112, "https://youtube.com", "Youtuber", "Hell")
+	print(sql.getAllJobs())
 	sql.close()
