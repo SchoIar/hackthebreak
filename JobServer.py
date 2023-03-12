@@ -8,6 +8,7 @@ import json
 import re
 import os
 import time
+#import db.SQLManager
 
 class JobServerHandler(socketserver.StreamRequestHandler):
 
@@ -151,6 +152,10 @@ class JobServer(socketserver.TCPServer):
         #creates a thread for the server to run on
         ServerThread = threading.Thread(target=self.runServer, name="ServerThreadName")
 
+        #opens the mysql database
+        #self.Database = db.SQLManager.SQLManager
+
+        #starts the thread
         ServerThread.start()
 
     def stopServer(self):
@@ -158,7 +163,10 @@ class JobServer(socketserver.TCPServer):
         self.shutdown()
 
         #waits for the server thread to close
-        self.ServerThread.join
+        self.ServerThread.join()
+
+        #closes the mysql database
+        #self.Database.close()
 
         #finializes the server close
         self.server_close()
