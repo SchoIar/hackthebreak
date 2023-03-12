@@ -9,5 +9,5 @@ if __name__ == "__main__":
 	print(sql.getUserInfo("test1", "xp"))
 	sql.addXp("test1", 100)
 	sql.removeStreak("test1")
-	sql.newJob("abcd", "https://github.com", "Githubber", "Github")
+	sql.newJob(1111, "https://github.com", "Githubber", "Github")
 	sql.close()
