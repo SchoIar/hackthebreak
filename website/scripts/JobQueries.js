@@ -25,7 +25,7 @@ function handleQueryResponse(result){
     mainDiv.innerHTML = ''
 
     for (var i = 0; i < result.length; i++){
-        var jobHTML = `<p>${result[i].title}, ${result[i].location}, ${result[i].link}</p>`;
+        var jobHTML = `<p>${result[i].title}, ${result[i].location}, <a href="${result[i].link}">${result[i].link}</a></p><p id="${result[i].id}" onclick="addExpForApp('${result[i].id}')">Apply</p>`;
         mainDiv.innerHTML = mainDiv.innerHTML.concat(jobHTML);
     }
 
@@ -34,12 +34,14 @@ function handleQueryResponse(result){
 
 
 function startQuery(){
-    //keywords = document.getElementById("Search").value;
-    //location = document.getElementById("Location").value;
+    inputFields = document.getElementsByClassName("inputField");
 
-    //console.log(`Searching for ${keywords} with location ${location} at url ${QueryIP}`);
+    let keywords = inputFields.Search.value;
+    let location = inputFields.location.value;
 
-    QueryJob("a", "b");
+    console.log(`Searching for ${keywords} with location ${location} at url ${QueryIP}`);
+
+    QueryJob(keywords, location);
 }
 
     
