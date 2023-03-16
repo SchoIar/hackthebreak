@@ -88,8 +88,9 @@ class indeedScraper():
                     listOfPostings.append(posting)
                 time.sleep(5)
             except NoSuchElementException:
+                print('Up to page + ' + str(page))
                 return listOfPostings
-                print('Error at page + ' + str(page))
+                
         
         driver.close()
         return listOfPostings
