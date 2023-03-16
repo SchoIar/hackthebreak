@@ -8,18 +8,21 @@ import time
 from bs4 import BeautifulSoup
 from selenium.webdriver.chrome.options import Options
 
-class indeedScraper():
 
-    def __init__(self):
-        pass
+class indeedScraper(jobsTitleChosen):
+
+    def __init__(self, jobTitleChosen):
+        self.job = jobTitleChosen
 
     def getJob(self, nameOfJob):
         '''Scrapes jobs from Indeed returning a list with their names.'''
-
-        nameOfJob = "Software Developer"
+        #nameOfJob = self.job
+        #nameOfJob = "Software Developer"
         chrome_options = Options()
-        #chrome_options.add_argument("--headless")
-        driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
+
+        # chrome_options.add_argument("--headless")
+        driver = webdriver.Chrome(service=Service(
+            ChromeDriverManager().install()), options=chrome_options)
 
         driver.get("https://ca.indeed.com/?r=us")
         elem = driver.find_element(By.NAME, "q")
@@ -33,28 +36,40 @@ class indeedScraper():
         location.send_keys(Keys.RETURN)
         time.sleep(5)
 
-        element = driver.find_element(By.XPATH,'/html/body/main/div/div[1]/div/div/div[2]/div/div/div/div[2]/div/div[1]')#button id="filter-dateposted"
+        # button id="filter-dateposted"
+        element = driver.find_element(
+            By.XPATH, '/html/body/main/div/div[1]/div/div/div[2]/div/div/div/div[2]/div/div[1]')
         element.click()
         time.sleep(5)
-        within24hours = driver.find_element(By.XPATH, '/html/body/main/div/div[1]/div/div/div[2]/div/div/div/div[2]/div/div[1]/ul/li[1]/a')
+        within24hours = driver.find_element(
+            By.XPATH, '/html/body/main/div/div[1]/div/div/div[2]/div/div/div/div[2]/div/div[1]/ul/li[1]/a')
         within24hours.click()
         time.sleep(5)
         currentUrl = driver.current_url
         print(currentUrl)
         soup = BeautifulSoup(driver.page_source, "html.parser")
-        jobs = soup.find_all("td",{"class":"resultContent"})
+        jobs = soup.find_all("td", {"class": "resultContent"})
+
+        listOfPostings = []
         for job in jobs:
             name = job.find("span")['title']
-            company = job.find("span",{"class":"companyName"}).string
-            location = job.find("div",{"class":"companyLocation"}).string
+            company = job.find("span", {"class": "companyName"}).string
+            location = job.find("div", {"class": "companyLocation"}).string
             linkID = job.a["data-jk"]
             link = 'https://ca.indeed.com/viewjob?jk=' + str(linkID)
-            #https://ca.indeed.com/viewjob?jk=
-            print(f'{name} at {company}, {location}, from {link}')#{link}')
+            # https://ca.indeed.com/viewjob?jk=
+            posting = {"Name": name,
+                       "Company": company,
+                       "Location": location,
+                       "Link": link, }
+            listOfPostings.append(posting)
         time.sleep(5)
         #content = driver.find_elements(By.CLASS_NAME, 'resultContent')
-        
-        driver.close()
 
-if(__name__ == "__main__"):
-    indeedScraper().getJob('Software Developer')
+        driver.close()
+        return listOfPostings
+
+
+if (__name__ == "__main__"):
+    indeedScraper(jobTitleChosen="Software Engineer").getJob(
+        'Software Developer')
