@@ -47,7 +47,10 @@ class indeedScraper():
             name = job.find("span")['title']
             company = job.find("span",{"class":"companyName"}).string
             location = job.find("div",{"class":"companyLocation"}).string
-            print(f'{name} at {company}, {location}')#{link}')
+            linkID = job.a["data-jk"]
+            link = 'https://ca.indeed.com/viewjob?jk=' + str(linkID)
+            #https://ca.indeed.com/viewjob?jk=
+            print(f'{name} at {company}, {location}, from {link}')#{link}')
         time.sleep(5)
         #content = driver.find_elements(By.CLASS_NAME, 'resultContent')
         
