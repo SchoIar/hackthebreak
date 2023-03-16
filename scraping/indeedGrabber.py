@@ -8,44 +8,50 @@ import time
 from bs4 import BeautifulSoup
 from selenium.webdriver.chrome.options import Options
 
+class indeedScraper():
 
-def getJob(nameOfJob):
-    '''Scrapes jobs from Indeed returning a list with their names.'''
+    def __init__(self):
+        pass
 
-    nameOfJob = "Software Developer"
-    chrome_options = Options()
-    #chrome_options.add_argument("--headless")
-    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
+    def getJob(self, nameOfJob):
+        '''Scrapes jobs from Indeed returning a list with their names.'''
 
-    driver.get("https://ca.indeed.com/?r=us")
-    elem = driver.find_element(By.NAME, "q")
-    elem.clear()
-    elem.send_keys(nameOfJob)
-    time.sleep(5)
-    location = driver.find_element(By.NAME, "l")
-    location.clear()
-    #location.send_keys("Vancouver, BC")
-    time.sleep(5)
-    location.send_keys(Keys.RETURN)
-    time.sleep(5)
+        nameOfJob = "Software Developer"
+        chrome_options = Options()
+        #chrome_options.add_argument("--headless")
+        driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
 
-    element = driver.find_element(By.XPATH,'/html/body/main/div/div[1]/div/div/div[2]/div/div/div/div[2]/div/div[1]')#button id="filter-dateposted"
-    element.click()
-    time.sleep(5)
-    within24hours = driver.find_element(By.XPATH, '/html/body/main/div/div[1]/div/div/div[2]/div/div/div/div[2]/div/div[1]/ul/li[1]/a')
-    within24hours.click()
-    time.sleep(5)
-    currentUrl = driver.current_url
-    print(currentUrl)
-    soup = BeautifulSoup(driver.page_source, "html.parser")
-    jobs = soup.find_all("td",{"class":"resultContent"})
-    for job in jobs:
-        name = job.find("span")['title']
-        location = job.find("span",{"class":"companyName"}).string
-        print(f'{name} at {location}')#{link}')
-    time.sleep(5)
-    #content = driver.find_elements(By.CLASS_NAME, 'resultContent')
-    
-    driver.close()
+        driver.get("https://ca.indeed.com/?r=us")
+        elem = driver.find_element(By.NAME, "q")
+        elem.clear()
+        elem.send_keys(nameOfJob)
+        time.sleep(5)
+        location = driver.find_element(By.NAME, "l")
+        location.clear()
+        #location.send_keys("Vancouver, BC")
+        time.sleep(5)
+        location.send_keys(Keys.RETURN)
+        time.sleep(5)
 
-getJob('Software Developer')
+        element = driver.find_element(By.XPATH,'/html/body/main/div/div[1]/div/div/div[2]/div/div/div/div[2]/div/div[1]')#button id="filter-dateposted"
+        element.click()
+        time.sleep(5)
+        within24hours = driver.find_element(By.XPATH, '/html/body/main/div/div[1]/div/div/div[2]/div/div/div/div[2]/div/div[1]/ul/li[1]/a')
+        within24hours.click()
+        time.sleep(5)
+        currentUrl = driver.current_url
+        print(currentUrl)
+        soup = BeautifulSoup(driver.page_source, "html.parser")
+        jobs = soup.find_all("td",{"class":"resultContent"})
+        for job in jobs:
+            name = job.find("span")['title']
+            company = job.find("span",{"class":"companyName"}).string
+            location = job.find("div",{"class":"companyLocation"}).string
+            print(f'{name} at {company}, {location}')#{link}')
+        time.sleep(5)
+        #content = driver.find_elements(By.CLASS_NAME, 'resultContent')
+        
+        driver.close()
+
+if(__name__ == "__main__"):
+    indeedScraper().getJob('Software Developer')
