@@ -14,9 +14,9 @@ class indeedScraper():
     def __init__(self, jobTitleChosen):
         self.job = jobTitleChosen
 
-    def getJob(self, nameOfJob):
+    def getJob(self):
         '''Scrapes jobs from Indeed returning a list with their names.'''
-        #nameOfJob = self.job
+        nameOfJob = self.job
         #nameOfJob = "Software Developer"
         chrome_options = Options()
 
@@ -45,7 +45,7 @@ class indeedScraper():
         time.sleep(5)
         
         currentUrl = driver.current_url
-        print(currentUrl)
+        #print(currentUrl)
         #Code above gets to 1st page of search results. 
 
         soup = BeautifulSoup(driver.page_source, "html.parser")
@@ -88,13 +88,10 @@ class indeedScraper():
                     listOfPostings.append(posting)
                 time.sleep(5)
             except NoSuchElementException:
-                print('Up to page + ' + str(page))
+                print('Printed up to page ' + str(page) + f' for {nameOfJob} positions\n')
                 return listOfPostings
-                
-        
         driver.close()
         return listOfPostings
 
-
 if (__name__ == "__main__"):
-    print(indeedScraper("Developer").getJob('Software Developer'))
+    print(indeedScraper("Developer").getJob())

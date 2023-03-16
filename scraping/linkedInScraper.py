@@ -4,20 +4,11 @@ import time
 import random
 from linkedin_api import Linkedin
 from dotenv import load_dotenv
+import toJson
 
 class linkedInScraper():
     def __init__(self):
         pass
-        
-    def read_json(self, filename='jobs.json'):
-        with open(filename, 'r') as file:
-            return json.load(file)
-
-    def write_json(self, newData):
-        with open('jobs.json', 'r+') as file:
-            data = self.read_json()
-            data['job-list'].append(newData)
-            json.dump(data, file)
 
     def searchJobs(self, apiChosen, numberOfSearches, keywordChosen, offsetNumber):
         jobs = apiChosen.search_jobs(keywordChosen, remote = 1, limit = \
@@ -50,10 +41,6 @@ if(__name__ == "__main__"):
     Password = os.getenv('PASSWORD')
     Email = os.getenv('EMAIL')
     api = Linkedin(Email, Password)
-    data = {"job-list": [{}]}
-    with open('jobs.json', 'w') as file:
-        json.dump(data, file)
-
     scraper = linkedInScraper()
     scraper.findSWEJobs(api)
     
