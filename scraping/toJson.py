@@ -12,6 +12,10 @@ class toJson():
         with open(filename, 'w') as file:
             json.dump(data, file)'''
     
+    def reset_file(self):
+        data = {"job-list": [{}]}
+        with open(self.filename, 'w') as file:
+            json.dump(data, file)
         
     def read_json(self):
         with open(self.filename, 'r') as file:
@@ -25,4 +29,4 @@ class toJson():
             json.dump(data, file, indent = 2)
 
 if(__name__ == "__main__"):
-    toJson(selectedField={'Mommy':'sorry'},filename='jobs.json').write_json()
+    toJson(selectedField={'A':'B'},filename='jobs.json').write_json()
