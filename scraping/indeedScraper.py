@@ -7,9 +7,9 @@ from selenium.webdriver.chrome.service import Service
 import time
 from bs4 import BeautifulSoup
 from selenium.webdriver.chrome.options import Options
+from selenium.common.exceptions import NoSuchElementException
 
-
-class indeedScraper(jobsTitleChosen):
+class indeedScraper():
 
     def __init__(self, jobTitleChosen):
         self.job = jobTitleChosen
@@ -36,17 +36,18 @@ class indeedScraper(jobsTitleChosen):
         location.send_keys(Keys.RETURN)
         time.sleep(5)
 
-        # button id="filter-dateposted"
-        element = driver.find_element(
-            By.XPATH, '/html/body/main/div/div[1]/div/div/div[2]/div/div/div/div[2]/div/div[1]')
+        #button id="filter-dateposted"
+        element = driver.find_element(By.XPATH, '/html/body/main/div/div[1]/div/div/div[2]/div/div/div/div[2]/div/div[1]')
         element.click()
         time.sleep(5)
-        within24hours = driver.find_element(
-            By.XPATH, '/html/body/main/div/div[1]/div/div/div[2]/div/div/div/div[2]/div/div[1]/ul/li[1]/a')
+        within24hours = driver.find_element(By.XPATH, '/html/body/main/div/div[1]/div/div/div[2]/div/div/div/div[2]/div/div[1]/ul/li[1]/a')
         within24hours.click()
         time.sleep(5)
+        
         currentUrl = driver.current_url
         print(currentUrl)
+        #Code above gets to 1st page of search results. 
+
         soup = BeautifulSoup(driver.page_source, "html.parser")
         jobs = soup.find_all("td", {"class": "resultContent"})
 
@@ -66,10 +67,33 @@ class indeedScraper(jobsTitleChosen):
         time.sleep(5)
         #content = driver.find_elements(By.CLASS_NAME, 'resultContent')
 
+        for page in range(2,15):
+            #iterate for up to 15 pages
+            try:
+                driver.find_element(By.XPATH, f'/html/body/main/div/div[1]/div/div/div[5]/div[1]/nav/div[{page}]/a')
+                soup = BeautifulSoup(driver.page_source, "html.parser")
+                jobs = soup.find_all("td", {"class": "resultContent"})
+
+                for job in jobs:
+                    name = job.find("span")['title']
+                    company = job.find("span", {"class": "companyName"}).string
+                    location = job.find("div", {"class": "companyLocation"}).string
+                    linkID = job.a["data-jk"]
+                    link = 'https://ca.indeed.com/viewjob?jk=' + str(linkID)
+                    # https://ca.indeed.com/viewjob?jk=
+                    posting = {"Name": name,
+                            "Company": company,
+                            "Location": location,
+                            "Link": link, }
+                    listOfPostings.append(posting)
+                time.sleep(5)
+            except NoSuchElementException:
+                return listOfPostings
+                print('Error at page + ' + str(page))
+        
         driver.close()
         return listOfPostings
 
 
 if (__name__ == "__main__"):
-    indeedScraper(jobTitleChosen="Software Engineer").getJob(
-        'Software Developer')
+    print(indeedScraper("Developer").getJob('Software Developer'))
