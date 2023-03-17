@@ -4,7 +4,7 @@ import time
 import random
 from linkedin_api import Linkedin
 from dotenv import load_dotenv
-import toJson
+from toJson import *
 
 class linkedInScraper():
     def __init__(self):
@@ -25,7 +25,8 @@ class linkedInScraper():
                 "Location":location
             }
             print(f"{title} : {jobID} : {location}")
-            self.write_json(job)
+            #self.write_json(job)
+            toJson(selectedField=job, filename='jobs.json', fieldname='job-list').write_json()
         
 
     def findSWEJobs(self, apiChosen):

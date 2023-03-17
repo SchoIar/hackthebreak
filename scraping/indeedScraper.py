@@ -12,11 +12,12 @@ from selenium.common.exceptions import NoSuchElementException
 class indeedScraper():
 
     def __init__(self, jobTitleChosen):
-        self.job = jobTitleChosen
+        #self.job = jobTitleChosen
+        pass
 
-    def getJob(self):
+    def getJob(self, field):
         '''Scrapes jobs from Indeed returning a list with their names.'''
-        nameOfJob = self.job
+        nameOfJob = field
         #nameOfJob = "Software Developer"
         chrome_options = Options()
 
@@ -43,10 +44,12 @@ class indeedScraper():
         within24hours = driver.find_element(By.XPATH, '/html/body/main/div/div[1]/div/div/div[2]/div/div/div/div[2]/div/div[1]/ul/li[1]/a')
         within24hours.click()
         time.sleep(5)
-        
-        currentUrl = driver.current_url
+        #currentUrl = driver.current_url
         #print(currentUrl)
-        #Code above gets to 1st page of search results. 
+
+        ########################################################
+        #           Above code to get to page with jobs        #
+        ########################################################
 
         soup = BeautifulSoup(driver.page_source, "html.parser")
         jobs = soup.find_all("td", {"class": "resultContent"})
@@ -89,9 +92,12 @@ class indeedScraper():
                 time.sleep(5)
             except NoSuchElementException:
                 print('Printed up to page ' + str(page) + f' for {nameOfJob} positions\n')
+                driver.close()
                 return listOfPostings
+            
         driver.close()
         return listOfPostings
 
 if (__name__ == "__main__"):
-    print(indeedScraper("Developer").getJob())
+    #print(indeedScraper("Developer").getJob('none'))
+    pass
