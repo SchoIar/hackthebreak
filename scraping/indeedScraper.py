@@ -11,7 +11,7 @@ from selenium.common.exceptions import NoSuchElementException
 
 class indeedScraper():
 
-    def __init__(self, jobTitleChosen):
+    def __init__(self):
         #self.job = jobTitleChosen
         pass
 

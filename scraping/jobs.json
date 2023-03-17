@@ -1,194 +1,454 @@
 {
    "job-list": [
       {
-         "Job title": "Full Stack Engineer",
-         "Job link": "https://www.linkedin.com/jobs/view/3496849496/",
-         "Location": "Canada"
+         "Name": "software testing engineer",
+         "Company": "Bloombase Canada Inc.",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=68d17279ea1d3e31"
       },
       {
-         "Job title": "Software Developer (Level 3) - Operations (Montreal, QC)",
-         "Job link": "https://www.linkedin.com/jobs/view/3517976014/",
-         "Location": "Montreal, QC"
+         "Name": "software engineer",
+         "Company": "Bloombase Canada Inc.",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=641e2a8c385f2a47"
       },
       {
-         "Job title": "Intern Bachelors Software Eng",
-         "Job link": "https://www.linkedin.com/jobs/view/3521105478/",
-         "Location": "Kanata, ON"
+         "Name": "DevOps Engineer II",
+         "Company": "Ansys",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=be23479c2d182f92"
       },
       {
-         "Job title": "Software Development Engineer in Test (SDET)",
-         "Job link": "https://www.linkedin.com/jobs/view/3499475343/",
-         "Location": "Vancouver, BC"
+         "Name": "software developer",
+         "Company": "RABBIT FEET ENTERTAINMENT INC.",
+         "Location": "Richmond, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=cc6c0eb6eedc2e59"
       },
       {
-         "Job title": "DevSecOps intern (5 mai-12 mois)",
-         "Job link": "https://www.linkedin.com/jobs/view/3496449883/",
-         "Location": "Halifax, NS"
+         "Name": "Software Engineer",
+         "Company": "Vizzion",
+         "Location": "North Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=be655f62e701ab34"
       },
       {
-         "Job title": "Intermediate Software Developer (Remote)",
-         "Job link": "https://www.linkedin.com/jobs/view/3486483222/",
-         "Location": "Toronto, ON"
+         "Name": "software developer",
+         "Company": "InfoSpec Systems Inc.",
+         "Location": "Richmond, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=e86301679a5c22c8"
       },
       {
-         "Job title": "Software Engineer II, Frontend DevXP",
-         "Job link": "https://www.linkedin.com/jobs/view/3514232674/",
-         "Location": "Brunswick, NB"
+         "Name": "Software Engineer",
+         "Company": "Workday",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=4f79f6e2fb43c667"
       },
       {
-         "Job title": "Java Fullstack developer",
-         "Job link": "https://www.linkedin.com/jobs/view/3371888399/",
-         "Location": "Mississauga, ON"
+         "Name": "Software Developer",
+         "Company": "Pacific Blue Cross",
+         "Location": "Burnaby, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=ffc9d1d2b0f92642"
       },
       {
-         "Job title": "Java Developer",
-         "Job link": "https://www.linkedin.com/jobs/view/3126665869/",
-         "Location": "Mississauga, ON"
+         "Name": "Frontend Software Engineer II, T&C",
+         "Company": "Highspot",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=e301669957cd98d5"
       },
       {
-         "Job title": "\u00c9tudiant et coop : Technologie de l\u2019information et ing\u00e9nierie",
-         "Job link": "https://www.linkedin.com/jobs/view/3488670480/",
-         "Location": "Halifax, NS"
+         "Name": "FortiClient Software Dev QA",
+         "Company": "Fortinet",
+         "Location": "Burnaby, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=1116d9b228d4c3be"
       },
       {
-         "Job title": "BlackBerry QNX - Software Developer in Test (Kernel Testing)",
-         "Job link": "https://www.linkedin.com/jobs/view/3506944237/",
-         "Location": "Ottawa, ON"
+         "Name": "Software Engineer",
+         "Company": "Autoship Systems Corporation",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=5521c5ff6a50f2e7"
       },
       {
-         "Job title": "Software Engineer II, Frontend DevXP",
-         "Job link": "https://www.linkedin.com/jobs/view/3514232674/",
-         "Location": "Brunswick, NB"
+         "Name": "Software Engineering Manager",
+         "Company": "Vizzion",
+         "Location": "North Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=e31ad8db615c5082"
       },
       {
-         "Job title": "Co-op IT Helpdesk- Morriston, ON (Hwy 6/Hwy 401)",
-         "Job link": "https://www.linkedin.com/jobs/view/3526081182/",
-         "Location": "Puslinch, ON"
+         "Name": "Software Developer, Senior - Remote, Canada",
+         "Company": "Smile DH",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=5e9babd7fe306234"
       },
       {
-         "Job title": "Java Developer ",
-         "Job link": "https://www.linkedin.com/jobs/view/3459615007/",
-         "Location": "Mississauga, ON"
+         "Name": "Junior Front-End Web Developer",
+         "Company": "Harris Computer Systems",
+         "Location": "North Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=75eace62a14ae352"
       },
       {
-         "Job title": "Java Developer",
-         "Job link": "https://www.linkedin.com/jobs/view/3126665869/",
-         "Location": "Mississauga, ON"
+         "Name": "Software Engineer",
+         "Company": "Electronic Arts",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=594e3ecbd87ea87c"
       },
       {
-         "Job title": "Java Developer ",
-         "Job link": "https://www.linkedin.com/jobs/view/3459615007/",
-         "Location": "Mississauga, ON"
+         "Name": "software testing engineer",
+         "Company": "Bloombase Canada Inc.",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=68d17279ea1d3e31"
       },
       {
-         "Job title": "Student and CO-OP: Human Resources",
-         "Job link": "https://www.linkedin.com/jobs/view/3501569356/",
-         "Location": "Gatineau, QC"
+         "Name": "software engineer",
+         "Company": "Bloombase Canada Inc.",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=641e2a8c385f2a47"
       },
       {
-         "Job title": "BlackBerry QNX Software Developer in Test II (Vertical Platforms)",
-         "Job link": "https://www.linkedin.com/jobs/view/3492670873/",
-         "Location": "Ottawa, ON"
+         "Name": "DevOps Engineer II",
+         "Company": "Ansys",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=be23479c2d182f92"
       },
       {
-         "Job title": "Fullstack Developer Intern (May - 4 month)",
-         "Job link": "https://www.linkedin.com/jobs/view/3521452579/",
-         "Location": "Markham, ON"
+         "Name": "software developer",
+         "Company": "RABBIT FEET ENTERTAINMENT INC.",
+         "Location": "Richmond, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=cc6c0eb6eedc2e59"
       },
       {
-         "Job title": "Information Technology (IT) Team - Canada Wide",
-         "Job link": "https://www.linkedin.com/jobs/view/3500812833/",
-         "Location": "Barrie, ON"
+         "Name": "Software Engineer",
+         "Company": "Vizzion",
+         "Location": "North Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=be655f62e701ab34"
       },
       {
-         "Job title": "Java Developer",
-         "Job link": "https://www.linkedin.com/jobs/view/3177042315/",
-         "Location": "Mississauga, ON"
+         "Name": "software developer",
+         "Company": "InfoSpec Systems Inc.",
+         "Location": "Richmond, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=e86301679a5c22c8"
       },
       {
-         "Job title": "Java Developer ",
-         "Job link": "https://www.linkedin.com/jobs/view/3459615007/",
-         "Location": "Mississauga, ON"
+         "Name": "Software Engineer",
+         "Company": "Workday",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=4f79f6e2fb43c667"
       },
       {
-         "Job title": "Java Developer (Backend)",
-         "Job link": "https://www.linkedin.com/jobs/view/2898160184/",
-         "Location": "Mississauga, ON"
+         "Name": "Software Developer",
+         "Company": "Pacific Blue Cross",
+         "Location": "Burnaby, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=ffc9d1d2b0f92642"
       },
       {
-         "Job title": "Student and CO-OP: Information Technology and Engineering",
-         "Job link": "https://www.linkedin.com/jobs/view/3502500611/",
-         "Location": "Halifax, NS"
+         "Name": "Frontend Software Engineer II, T&C",
+         "Company": "Highspot",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=e301669957cd98d5"
       },
       {
-         "Job title": "Software Developer in Test (SDET) - Canada",
-         "Job link": "https://www.linkedin.com/jobs/view/3514641908/",
-         "Location": "Montreal, QC"
+         "Name": "FortiClient Software Dev QA",
+         "Company": "Fortinet",
+         "Location": "Burnaby, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=1116d9b228d4c3be"
       },
       {
-         "Job title": "Developer, Software Server",
-         "Job link": "https://www.linkedin.com/jobs/view/3507407045/",
-         "Location": "Mississauga, ON"
+         "Name": "Software Engineer",
+         "Company": "Autoship Systems Corporation",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=5521c5ff6a50f2e7"
       },
       {
-         "Job title": "Facilities Emulation Software Eng Co-op",
-         "Job link": "https://www.linkedin.com/jobs/view/3525241223/",
-         "Location": "Waterloo, ON"
+         "Name": "Software Engineering Manager",
+         "Company": "Vizzion",
+         "Location": "North Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=e31ad8db615c5082"
       },
       {
-         "Job title": "Java Developer",
-         "Job link": "https://www.linkedin.com/jobs/view/2689275737/",
-         "Location": "Mississauga, ON"
+         "Name": "Software Developer, Senior - Remote, Canada",
+         "Company": "Smile DH",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=5e9babd7fe306234"
       },
       {
-         "Job title": "Java Developer",
-         "Job link": "https://www.linkedin.com/jobs/view/3268231399/",
-         "Location": "Mississauga, ON"
+         "Name": "Junior Front-End Web Developer",
+         "Company": "Harris Computer Systems",
+         "Location": "North Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=75eace62a14ae352"
       },
       {
-         "Job title": "Senior Frontend Developer",
-         "Job link": "https://www.linkedin.com/jobs/view/3510928474/",
-         "Location": "Edmonton, AB"
+         "Name": "Software Engineer",
+         "Company": "Electronic Arts",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=594e3ecbd87ea87c"
       },
       {
-         "Job title": "\u00c9tudiant et coop : Technologie de l\u2019information et ing\u00e9nierie",
-         "Job link": "https://www.linkedin.com/jobs/view/3512655907/",
-         "Location": "Ottawa, ON"
+         "Name": "software testing engineer",
+         "Company": "Bloombase Canada Inc.",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=68d17279ea1d3e31"
       },
       {
-         "Job title": "Software Developer in Test (SDET) - Canada",
-         "Job link": "https://www.linkedin.com/jobs/view/3514639889/",
-         "Location": "Toronto, ON"
+         "Name": "software engineer",
+         "Company": "Bloombase Canada Inc.",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=641e2a8c385f2a47"
       },
       {
-         "Job title": "DevSecOps intern (5 mai-12 mois)",
-         "Job link": "https://www.linkedin.com/jobs/view/3496453594/",
-         "Location": "Bedford, NS"
+         "Name": "DevOps Engineer II",
+         "Company": "Ansys",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=be23479c2d182f92"
       },
       {
-         "Job title": "Facilities Emulation Software Eng Co-op",
-         "Job link": "https://www.linkedin.com/jobs/view/3525237745/",
-         "Location": "Waterloo, ON"
+         "Name": "software developer",
+         "Company": "RABBIT FEET ENTERTAINMENT INC.",
+         "Location": "Richmond, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=cc6c0eb6eedc2e59"
       },
       {
-         "Job title": "Software Developer in Test (SDET) - Canada",
-         "Job link": "https://www.linkedin.com/jobs/view/3514641908/",
-         "Location": "Montreal, QC"
+         "Name": "Software Engineer",
+         "Company": "Vizzion",
+         "Location": "North Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=be655f62e701ab34"
       },
       {
-         "Job title": "Java Developer (Backend)",
-         "Job link": "https://www.linkedin.com/jobs/view/2898160184/",
-         "Location": "Mississauga, ON"
+         "Name": "software developer",
+         "Company": "InfoSpec Systems Inc.",
+         "Location": "Richmond, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=e86301679a5c22c8"
       },
       {
-         "Job title": "Full Stack Engineer",
-         "Job link": "https://www.linkedin.com/jobs/view/3496849496/",
-         "Location": "Canada"
+         "Name": "Software Engineer",
+         "Company": "Workday",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=4f79f6e2fb43c667"
       },
       {
-         "Job title": "\u00c9tudiant et coop : Technologie de l\u2019information et ing\u00e9nierie",
-         "Job link": "https://www.linkedin.com/jobs/view/3488670484/",
-         "Location": "Calgary, AB"
+         "Name": "Software Developer",
+         "Company": "Pacific Blue Cross",
+         "Location": "Burnaby, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=ffc9d1d2b0f92642"
+      },
+      {
+         "Name": "Frontend Software Engineer II, T&C",
+         "Company": "Highspot",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=e301669957cd98d5"
+      },
+      {
+         "Name": "FortiClient Software Dev QA",
+         "Company": "Fortinet",
+         "Location": "Burnaby, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=1116d9b228d4c3be"
+      },
+      {
+         "Name": "Software Engineer",
+         "Company": "Autoship Systems Corporation",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=5521c5ff6a50f2e7"
+      },
+      {
+         "Name": "Software Engineering Manager",
+         "Company": "Vizzion",
+         "Location": "North Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=e31ad8db615c5082"
+      },
+      {
+         "Name": "Software Developer, Senior - Remote, Canada",
+         "Company": "Smile DH",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=5e9babd7fe306234"
+      },
+      {
+         "Name": "Junior Front-End Web Developer",
+         "Company": "Harris Computer Systems",
+         "Location": "North Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=75eace62a14ae352"
+      },
+      {
+         "Name": "Software Engineer",
+         "Company": "Electronic Arts",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=594e3ecbd87ea87c"
+      },
+      {
+         "Name": "software testing engineer",
+         "Company": "Bloombase Canada Inc.",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=68d17279ea1d3e31"
+      },
+      {
+         "Name": "software engineer",
+         "Company": "Bloombase Canada Inc.",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=641e2a8c385f2a47"
+      },
+      {
+         "Name": "DevOps Engineer II",
+         "Company": "Ansys",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=be23479c2d182f92"
+      },
+      {
+         "Name": "software developer",
+         "Company": "RABBIT FEET ENTERTAINMENT INC.",
+         "Location": "Richmond, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=cc6c0eb6eedc2e59"
+      },
+      {
+         "Name": "Software Engineer",
+         "Company": "Vizzion",
+         "Location": "North Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=be655f62e701ab34"
+      },
+      {
+         "Name": "software developer",
+         "Company": "InfoSpec Systems Inc.",
+         "Location": "Richmond, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=e86301679a5c22c8"
+      },
+      {
+         "Name": "Software Engineer",
+         "Company": "Workday",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=4f79f6e2fb43c667"
+      },
+      {
+         "Name": "Software Developer",
+         "Company": "Pacific Blue Cross",
+         "Location": "Burnaby, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=ffc9d1d2b0f92642"
+      },
+      {
+         "Name": "Frontend Software Engineer II, T&C",
+         "Company": "Highspot",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=e301669957cd98d5"
+      },
+      {
+         "Name": "FortiClient Software Dev QA",
+         "Company": "Fortinet",
+         "Location": "Burnaby, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=1116d9b228d4c3be"
+      },
+      {
+         "Name": "Software Engineer",
+         "Company": "Autoship Systems Corporation",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=5521c5ff6a50f2e7"
+      },
+      {
+         "Name": "Software Engineering Manager",
+         "Company": "Vizzion",
+         "Location": "North Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=e31ad8db615c5082"
+      },
+      {
+         "Name": "Software Developer, Senior - Remote, Canada",
+         "Company": "Smile DH",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=5e9babd7fe306234"
+      },
+      {
+         "Name": "Junior Front-End Web Developer",
+         "Company": "Harris Computer Systems",
+         "Location": "North Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=75eace62a14ae352"
+      },
+      {
+         "Name": "Software Engineer",
+         "Company": "Electronic Arts",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=594e3ecbd87ea87c"
+      },
+      {
+         "Name": "software testing engineer",
+         "Company": "Bloombase Canada Inc.",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=68d17279ea1d3e31"
+      },
+      {
+         "Name": "software engineer",
+         "Company": "Bloombase Canada Inc.",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=641e2a8c385f2a47"
+      },
+      {
+         "Name": "DevOps Engineer II",
+         "Company": "Ansys",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=be23479c2d182f92"
+      },
+      {
+         "Name": "software developer",
+         "Company": "RABBIT FEET ENTERTAINMENT INC.",
+         "Location": "Richmond, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=cc6c0eb6eedc2e59"
+      },
+      {
+         "Name": "Software Engineer",
+         "Company": "Vizzion",
+         "Location": "North Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=be655f62e701ab34"
+      },
+      {
+         "Name": "software developer",
+         "Company": "InfoSpec Systems Inc.",
+         "Location": "Richmond, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=e86301679a5c22c8"
+      },
+      {
+         "Name": "Software Engineer",
+         "Company": "Workday",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=4f79f6e2fb43c667"
+      },
+      {
+         "Name": "Software Developer",
+         "Company": "Pacific Blue Cross",
+         "Location": "Burnaby, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=ffc9d1d2b0f92642"
+      },
+      {
+         "Name": "Frontend Software Engineer II, T&C",
+         "Company": "Highspot",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=e301669957cd98d5"
+      },
+      {
+         "Name": "FortiClient Software Dev QA",
+         "Company": "Fortinet",
+         "Location": "Burnaby, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=1116d9b228d4c3be"
+      },
+      {
+         "Name": "Software Engineer",
+         "Company": "Autoship Systems Corporation",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=5521c5ff6a50f2e7"
+      },
+      {
+         "Name": "Software Engineering Manager",
+         "Company": "Vizzion",
+         "Location": "North Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=e31ad8db615c5082"
+      },
+      {
+         "Name": "Software Developer, Senior - Remote, Canada",
+         "Company": "Smile DH",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=5e9babd7fe306234"
+      },
+      {
+         "Name": "Junior Front-End Web Developer",
+         "Company": "Harris Computer Systems",
+         "Location": "North Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=75eace62a14ae352"
+      },
+      {
+         "Name": "Software Engineer",
+         "Company": "Electronic Arts",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=594e3ecbd87ea87c"
       }
    ]
 }
