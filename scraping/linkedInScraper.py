@@ -14,21 +14,29 @@ class linkedInScraper():
     def searchJobs(self, apiChosen, numberOfSearches, keywordChosen, offsetNumber):
         jobs = apiChosen.search_jobs(
             keywordChosen, remote=1, limit=numberOfSearches, offset=offsetNumber)
+        
         for job in jobs:
+
+            companyURNid = job['companyDetails'].get('company').split(':')[-1]
+            #URN id for company [number]
+            companyInfo = apiChosen.get_company(companyURNid)
+            #print(companyInfo['title'])
+            companyLink = companyInfo['url'].split('company/')
+            companyName = companyLink[1].capitalize().replace('-',' ')
             title = job['title']
+    
+            
             jobID = job['dashEntityUrn'].split(':')[-1]
             location = job['formattedLocation']
             #jobDetails = api.get_job(jobID)
             jobLink = f'https://www.linkedin.com/jobs/view/{jobID}/'
 
             job = {"Job Title": title,
-                   "Company": ' ',
+                   "Company": companyName,
                    "Location": location,
                    "Link": jobLink, }
-            print(f"{title} : {jobID} : {location}")
-            # self.write_json(job)
-            toJson(selectedField=job, filename='jobs.json',
-                   fieldname='job-list').write_json()
+            #self.write_json(job) 
+            toJson(selectedField=job, filename='jobs.json',fieldname='job-list').write_json()
 
     def findSWEJobs(self, apiChosen):
         listOfJobs = ["Software Developer", "Software Engineer", "Software Intern",

@@ -449,7 +449,42 @@
          "Company": "Electronic Arts",
          "Location": "Vancouver, BC",
          "Link": "https://ca.indeed.com/viewjob?jk=594e3ecbd87ea87c"
+      },
+      {
+         "Job Title": "Consultant",
+         "Company": "Level5 strategy",
+         "Location": "Toronto, ON",
+         "Link": "https://www.linkedin.com/jobs/view/3523499046/"
+      },
+      {
+         "Job Title": "Full Stack Engineer",
+         "Company": "Dbsync",
+         "Location": "Canada",
+         "Link": "https://www.linkedin.com/jobs/view/3496849496/"
+      },
+      {
+         "Job Title": "d\u2019un(e) d\u00e9veloppeur(euse) de logiciels principal(e)",
+         "Company": "Lightspeedcommerce",
+         "Location": "Montreal, QC",
+         "Link": "https://www.linkedin.com/jobs/view/3430391651/"
+      },
+      {
+         "Job Title": "SDET Full Stack Testing Engineer",
+         "Company": "Tech mahindra",
+         "Location": "Ontario, Canada",
+         "Link": "https://www.linkedin.com/jobs/view/3518180667/"
+      },
+      {
+         "Job Title": "Software Engineering Manager",
+         "Company": "Darkvision technologies",
+         "Location": "Vancouver, BC",
+         "Link": "https://www.linkedin.com/jobs/view/3505250679/"
+      },
+      {
+         "Job Title": "Software quality assurance - cloud operation co-op",
+         "Company": "Schneider electric",
+         "Location": "Victoria, BC",
+         "Link": "https://www.linkedin.com/jobs/view/3526173496/"
       }
-      
    ]
 }
