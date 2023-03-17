@@ -21,5 +21,5 @@ if(__name__ == "__main__"):
     #linkedInScraper() 
     #toJson(indeedScraper('Software Developer').getJob(),'jobs.json','job-list')
     #scraper().scrapeIndeed('Software Developer')
-    scraper().ScrapeLinkedIn()
-    
+    print(scraper().ScrapeLinkedIn())
+

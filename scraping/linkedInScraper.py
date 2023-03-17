@@ -12,11 +12,10 @@ class linkedInScraper():
         pass
 
     def searchJobs(self, apiChosen, numberOfSearches, keywordChosen, offsetNumber):
+        jobList = []
         jobs = apiChosen.search_jobs(
             keywordChosen, remote=1, limit=numberOfSearches, offset=offsetNumber)
-        
         for job in jobs:
-
             companyURNid = job['companyDetails'].get('company').split(':')[-1]
             #URN id for company [number]
             companyInfo = apiChosen.get_company(companyURNid)
@@ -24,7 +23,7 @@ class linkedInScraper():
             companyLink = companyInfo['url'].split('company/')
             companyName = companyLink[1].capitalize().replace('-',' ')
             title = job['title']
-    
+
             
             jobID = job['dashEntityUrn'].split(':')[-1]
             location = job['formattedLocation']
@@ -32,21 +31,26 @@ class linkedInScraper():
             jobLink = f'https://www.linkedin.com/jobs/view/{jobID}/'
 
             job = {"Job Title": title,
-                   "Company": companyName,
-                   "Location": location,
-                   "Link": jobLink, }
+                    "Company": companyName,
+                    "Location": location,
+                    "Link": jobLink, }
+            print(job)
             #self.write_json(job) 
-            toJson(selectedField=job, filename='jobs.json',fieldname='job-list').write_json()
+            jobList.append(job)
+        #toJson(selectedField=job, filename='jobs.json',fieldname='job-list').write_json()
+        return jobList
 
     def findSWEJobs(self, apiChosen):
         listOfJobs = ["Software Developer", "Software Engineer", "Software Intern",
                       "SDET", "Developer Intern", "Software co-op", "Junior Developer"]
-        for i in range(11, 101):
-
+        jobsList = []
+        for i in range(1, 101):
+        
             for element in listOfJobs:
-                self.searchJobs(apiChosen, 1, element, i)
+                jobsList.append(self.searchJobs(apiChosen, 1, element, i))
                 time.sleep(1*random.randint(1, 5)+2)
 
+        return jobsList
 
 if (__name__ == "__main__"):
     load_dotenv()
