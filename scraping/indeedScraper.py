@@ -84,7 +84,7 @@ class indeedScraper():
                     linkID = job.a["data-jk"]
                     link = 'https://ca.indeed.com/viewjob?jk=' + str(linkID)
                     # https://ca.indeed.com/viewjob?jk=
-                    posting = {"Name": name,
+                    posting = {"Job Title": name,
                             "Company": company,
                             "Location": location,
                             "Link": link, }

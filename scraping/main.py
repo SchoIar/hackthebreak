@@ -13,10 +13,13 @@ class scraper():
             toJson(selectedField=indeedJobs[i],filename="jobs.json",fieldname="job-list").write_json()
             i += 1
         print(indeedJobs)
+    
+    def ScrapeLinkedIn(self):
+        linkedInScraper()
 
 if(__name__ == "__main__"):
     #linkedInScraper() 
     #toJson(indeedScraper('Software Developer').getJob(),'jobs.json','job-list')
-    scraper().scrapeIndeed('Software Developer')
-
+    #scraper().scrapeIndeed('Software Developer')
+    scraper().ScrapeLinkedIn()
     
