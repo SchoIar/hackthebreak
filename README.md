@@ -15,10 +15,12 @@ Anton, Duncan, Leo, Nick.
 The scraper was built with Python, using the LinkedIn API, beautifulsoup4, Selenium webdriver. 
 
 To run the scraper, do the following:
-'pip3 install requirements.txt'
-'cd scraping'
+
+`pip3 install requirements.txt`
+`cd scraping`
 Place your linkedIn account password, and email in a .env, with the names "PASSWORD" and "EMAIL"
-'python3 main.py'
+`python3 main.py`
+
 Relevent job postings will be put into the `jobs.json` file. Note that this may take a while, as the LinkedIn scraper has a delay, to avoid CHALLENGES.
 
 
