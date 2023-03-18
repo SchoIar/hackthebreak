@@ -10,10 +10,9 @@ class Scraper():
         indeedJobs = indeedScraper().getJob(searchQuery)
         i = 0
         for i in range(0, len(indeedJobs)):
-            #print(f'{indeedJobs[i]} \n')
             toJson(selectedField=indeedJobs[i],filename="jobs.json",fieldname="job-list").write_json()
             i += 1
-        #print(indeedJobs)
+
         return indeedJobs
         
     
@@ -29,7 +28,7 @@ class Scraper():
         for i in range(0, len(linkedInJobs)):
             toJson(selectedField=linkedInJobs[i],filename="jobs.json",fieldname="job-list").write_json()
             i += 1
-        #print(indeedJobs)
+
         return linkedInJobs
 
 if(__name__ == "__main__"):
