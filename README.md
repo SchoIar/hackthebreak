@@ -36,3 +36,7 @@ Duncan to comment.
 Leo to comment.
 
 ## Future plans? 
+
+We plan to improve the scraper, to get job postings from other sites, and add the option to filter on the website for only remote jobs. We also hope to expand our database, in order to offer postings on all fields, and allow employers to post jobs within our site. 
+
+We also plan to improve our frontend, and learn the MERN stack in the process. 
