@@ -34,10 +34,10 @@ class linkedInScraper():
                     "Company": companyName,
                     "Location": location,
                     "Link": jobLink, }
-            print(job)
-            #self.write_json(job) 
+            #print(job)
+
             jobList.append(job)
-        #toJson(selectedField=job, filename='jobs.json',fieldname='job-list').write_json()
+
         return jobList
 
     def findSWEJobs(self, apiChosen):

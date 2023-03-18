@@ -99,5 +99,5 @@ class indeedScraper():
         return listOfPostings
 
 if (__name__ == "__main__"):
-    #print(indeedScraper("Developer").getJob('none'))
-    pass
+    print(indeedScraper().getJob("Developer"))
+    

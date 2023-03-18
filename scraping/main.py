@@ -1,25 +1,41 @@
 from linkedInScraper import *
 from indeedScraper import *
 from toJson import *
-class scraper():
+class Scraper():
     def __init__(self):
         pass
 
     def scrapeIndeed(self, searchQuery):
+        '''Calls the indeed scrapper & sends the data to the json file'''
         indeedJobs = indeedScraper().getJob(searchQuery)
         i = 0
         for i in range(0, len(indeedJobs)):
-            print(f'{indeedJobs[i]} \n')
+            #print(f'{indeedJobs[i]} \n')
             toJson(selectedField=indeedJobs[i],filename="jobs.json",fieldname="job-list").write_json()
             i += 1
-        print(indeedJobs)
+        #print(indeedJobs)
+        return indeedJobs
+        
     
-    def ScrapeLinkedIn(self):
-        linkedInScraper()
+    def scrapeLinkedIn(self):
+        '''Scrapes LinkedIn for SWE related jobs'''
+        load_dotenv()
+        Password = os.getenv('PASSWORD')
+        Email = os.getenv('EMAIL')
+        api = Linkedin(Email, Password)
+        LinkedInScraper = linkedInScraper()
+        linkedInJobs = LinkedInScraper.findSWEJobs(api)
+        i = 0
+        for i in range(0, len(linkedInJobs)):
+            toJson(selectedField=linkedInJobs[i],filename="jobs.json",fieldname="job-list").write_json()
+            i += 1
+        #print(indeedJobs)
+        return linkedInJobs
 
 if(__name__ == "__main__"):
     #linkedInScraper() 
     #toJson(indeedScraper('Software Developer').getJob(),'jobs.json','job-list')
-    #scraper().scrapeIndeed('Software Developer')
-    print(scraper().ScrapeLinkedIn())
+
+    #print(Scraper().scrapeIndeed('Software Developer'))
+    print(Scraper().scrapeLinkedIn())
 

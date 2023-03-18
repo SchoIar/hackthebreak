@@ -449,7 +449,726 @@
          "Company": "Electronic Arts",
          "Location": "Vancouver, BC",
          "Link": "https://ca.indeed.com/viewjob?jk=594e3ecbd87ea87c"
+      },
+      {
+         "Name": "software testing engineer",
+         "Company": "Bloombase Canada Inc.",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=68d17279ea1d3e31"
+      },
+      {
+         "Name": "Front-end Software Developer",
+         "Company": "University of British Columbia",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=d168c84e197b0db5"
+      },
+      {
+         "Name": "software engineer",
+         "Company": "Bloombase Canada Inc.",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=641e2a8c385f2a47"
+      },
+      {
+         "Name": "Software Tools Developer",
+         "Company": "Kardium",
+         "Location": "Burnaby, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=1a4159fb55da161c"
+      },
+      {
+         "Name": "Frontend Software Engineer II, T&C",
+         "Company": "Highspot",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=e301669957cd98d5"
+      },
+      {
+         "Name": "Junior Front-End Web Developer",
+         "Company": "Harris Computer Systems",
+         "Location": "North Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=75eace62a14ae352"
+      },
+      {
+         "Name": "UI Engineer (Web), Apple Media Products, Apps",
+         "Company": "Apple",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=429fbf973c14334d"
+      },
+      {
+         "Name": "Web developer",
+         "Company": "The Beard Struggle",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=c551767f95dacdec"
+      },
+      {
+         "Name": "game developer, computer",
+         "Company": "Pearl Abyss Canada Studio Inc.",
+         "Location": "Burnaby, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=2027cacfa509dca2"
+      },
+      {
+         "Name": "Software QA Engineer",
+         "Company": "Corinex Communications",
+         "Location": "Hybrid remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=702f97b78b2c7dba"
+      },
+      {
+         "Name": "Software Engineer",
+         "Company": "Autoship Systems Corporation",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=5521c5ff6a50f2e7"
+      },
+      {
+         "Name": "Software Developer, Senior - Remote, Canada",
+         "Company": "Smile DH",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=5e9babd7fe306234"
+      },
+      {
+         "Name": "UI Software Engineer",
+         "Company": "Electronic Arts",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=9f911b91a025c5ba"
+      },
+      {
+         "Name": "Full Stack Software Engineer",
+         "Company": "CyberCoders",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=81dc822fe7128d28"
+      },
+      {
+         "Name": "Full Stack Web Developer",
+         "Company": "Arcurve Inc.",
+         "Location": "Hybrid remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=55ccbe99458cf36d"
+      },
+      {
+         "Job Title": "software testing engineer",
+         "Company": "Bloombase Canada Inc.",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=68d17279ea1d3e31"
+      },
+      {
+         "Job Title": "Front-end Software Developer",
+         "Company": "University of British Columbia",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=d168c84e197b0db5"
+      },
+      {
+         "Job Title": "software engineer",
+         "Company": "Bloombase Canada Inc.",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=641e2a8c385f2a47"
+      },
+      {
+         "Job Title": "Software Tools Developer",
+         "Company": "Kardium",
+         "Location": "Burnaby, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=1a4159fb55da161c"
+      },
+      {
+         "Job Title": "Frontend Software Engineer II, T&C",
+         "Company": "Highspot",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=e301669957cd98d5"
+      },
+      {
+         "Job Title": "Junior Front-End Web Developer",
+         "Company": "Harris Computer Systems",
+         "Location": "North Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=75eace62a14ae352"
+      },
+      {
+         "Job Title": "UI Engineer (Web), Apple Media Products, Apps",
+         "Company": "Apple",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=429fbf973c14334d"
+      },
+      {
+         "Job Title": "Web developer",
+         "Company": "The Beard Struggle",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=c551767f95dacdec"
+      },
+      {
+         "Job Title": "game developer, computer",
+         "Company": "Pearl Abyss Canada Studio Inc.",
+         "Location": "Burnaby, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=2027cacfa509dca2"
+      },
+      {
+         "Job Title": "Software QA Engineer",
+         "Company": "Corinex Communications",
+         "Location": "Hybrid remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=702f97b78b2c7dba"
+      },
+      {
+         "Job Title": "Software Engineer",
+         "Company": "Autoship Systems Corporation",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=5521c5ff6a50f2e7"
+      },
+      {
+         "Job Title": "Software Developer, Senior - Remote, Canada",
+         "Company": "Smile DH",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=5e9babd7fe306234"
+      },
+      {
+         "Job Title": "UI Software Engineer",
+         "Company": "Electronic Arts",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=9f911b91a025c5ba"
+      },
+      {
+         "Job Title": "Full Stack Software Engineer",
+         "Company": "CyberCoders",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=81dc822fe7128d28"
+      },
+      {
+         "Job Title": "Full Stack Web Developer",
+         "Company": "Arcurve Inc.",
+         "Location": "Hybrid remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=55ccbe99458cf36d"
+      },
+      {
+         "Job Title": "software testing engineer",
+         "Company": "Bloombase Canada Inc.",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=68d17279ea1d3e31"
+      },
+      {
+         "Job Title": "Front-end Software Developer",
+         "Company": "University of British Columbia",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=d168c84e197b0db5"
+      },
+      {
+         "Job Title": "software engineer",
+         "Company": "Bloombase Canada Inc.",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=641e2a8c385f2a47"
+      },
+      {
+         "Job Title": "Software Tools Developer",
+         "Company": "Kardium",
+         "Location": "Burnaby, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=1a4159fb55da161c"
+      },
+      {
+         "Job Title": "Frontend Software Engineer II, T&C",
+         "Company": "Highspot",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=e301669957cd98d5"
+      },
+      {
+         "Job Title": "Junior Front-End Web Developer",
+         "Company": "Harris Computer Systems",
+         "Location": "North Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=75eace62a14ae352"
+      },
+      {
+         "Job Title": "UI Engineer (Web), Apple Media Products, Apps",
+         "Company": "Apple",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=429fbf973c14334d"
+      },
+      {
+         "Job Title": "Web developer",
+         "Company": "The Beard Struggle",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=c551767f95dacdec"
+      },
+      {
+         "Job Title": "game developer, computer",
+         "Company": "Pearl Abyss Canada Studio Inc.",
+         "Location": "Burnaby, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=2027cacfa509dca2"
+      },
+      {
+         "Job Title": "Software QA Engineer",
+         "Company": "Corinex Communications",
+         "Location": "Hybrid remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=702f97b78b2c7dba"
+      },
+      {
+         "Job Title": "Software Engineer",
+         "Company": "Autoship Systems Corporation",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=5521c5ff6a50f2e7"
+      },
+      {
+         "Job Title": "Software Developer, Senior - Remote, Canada",
+         "Company": "Smile DH",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=5e9babd7fe306234"
+      },
+      {
+         "Job Title": "UI Software Engineer",
+         "Company": "Electronic Arts",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=9f911b91a025c5ba"
+      },
+      {
+         "Job Title": "Full Stack Software Engineer",
+         "Company": "CyberCoders",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=81dc822fe7128d28"
+      },
+      {
+         "Job Title": "Full Stack Web Developer",
+         "Company": "Arcurve Inc.",
+         "Location": "Hybrid remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=55ccbe99458cf36d"
+      },
+      {
+         "Job Title": "software testing engineer",
+         "Company": "Bloombase Canada Inc.",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=68d17279ea1d3e31"
+      },
+      {
+         "Job Title": "Front-end Software Developer",
+         "Company": "University of British Columbia",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=d168c84e197b0db5"
+      },
+      {
+         "Job Title": "software engineer",
+         "Company": "Bloombase Canada Inc.",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=641e2a8c385f2a47"
+      },
+      {
+         "Job Title": "Software Tools Developer",
+         "Company": "Kardium",
+         "Location": "Burnaby, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=1a4159fb55da161c"
+      },
+      {
+         "Job Title": "Frontend Software Engineer II, T&C",
+         "Company": "Highspot",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=e301669957cd98d5"
+      },
+      {
+         "Job Title": "Junior Front-End Web Developer",
+         "Company": "Harris Computer Systems",
+         "Location": "North Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=75eace62a14ae352"
+      },
+      {
+         "Job Title": "UI Engineer (Web), Apple Media Products, Apps",
+         "Company": "Apple",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=429fbf973c14334d"
+      },
+      {
+         "Job Title": "Web developer",
+         "Company": "The Beard Struggle",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=c551767f95dacdec"
+      },
+      {
+         "Job Title": "game developer, computer",
+         "Company": "Pearl Abyss Canada Studio Inc.",
+         "Location": "Burnaby, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=2027cacfa509dca2"
+      },
+      {
+         "Job Title": "Software QA Engineer",
+         "Company": "Corinex Communications",
+         "Location": "Hybrid remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=702f97b78b2c7dba"
+      },
+      {
+         "Job Title": "Software Engineer",
+         "Company": "Autoship Systems Corporation",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=5521c5ff6a50f2e7"
+      },
+      {
+         "Job Title": "Software Developer, Senior - Remote, Canada",
+         "Company": "Smile DH",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=5e9babd7fe306234"
+      },
+      {
+         "Job Title": "UI Software Engineer",
+         "Company": "Electronic Arts",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=9f911b91a025c5ba"
+      },
+      {
+         "Job Title": "Full Stack Software Engineer",
+         "Company": "CyberCoders",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=81dc822fe7128d28"
+      },
+      {
+         "Job Title": "Full Stack Web Developer",
+         "Company": "Arcurve Inc.",
+         "Location": "Hybrid remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=55ccbe99458cf36d"
+      },
+      {
+         "Name": "software testing engineer",
+         "Company": "Bloombase Canada Inc.",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=68d17279ea1d3e31"
+      },
+      {
+         "Name": "software engineer",
+         "Company": "Bloombase Canada Inc.",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=641e2a8c385f2a47"
+      },
+      {
+         "Name": "Front-end Software Developer",
+         "Company": "University of British Columbia",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=d168c84e197b0db5"
+      },
+      {
+         "Name": "game developer, computer",
+         "Company": "Pearl Abyss Canada Studio Inc.",
+         "Location": "Burnaby, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=2027cacfa509dca2"
+      },
+      {
+         "Name": "Software Tools Developer",
+         "Company": "Kardium",
+         "Location": "Burnaby, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=1a4159fb55da161c"
+      },
+      {
+         "Name": "software developer",
+         "Company": "InfoSpec Systems Inc.",
+         "Location": "Richmond, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=e86301679a5c22c8"
+      },
+      {
+         "Name": "Software Engineer",
+         "Company": "Autoship Systems Corporation",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=5521c5ff6a50f2e7"
+      },
+      {
+         "Name": "Software Developer, Senior - Remote, Canada",
+         "Company": "Smile DH",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=5e9babd7fe306234"
+      },
+      {
+         "Name": "Frontend Software Engineer II, T&C",
+         "Company": "Highspot",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=e301669957cd98d5"
+      },
+      {
+         "Name": "Software Engineer",
+         "Company": "Electronic Arts",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=594e3ecbd87ea87c"
+      },
+      {
+         "Name": "Junior Front-End Web Developer",
+         "Company": "Harris Computer Systems",
+         "Location": "North Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=75eace62a14ae352"
+      },
+      {
+         "Name": "Web developer",
+         "Company": "The Beard Struggle",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=c551767f95dacdec"
+      },
+      {
+         "Name": "Systems Software Engineer - NHL 24",
+         "Company": "Electronic Arts",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=a34cb3c7213f08ca"
+      },
+      {
+         "Name": "Full Stack Software Engineer",
+         "Company": "CyberCoders",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=81dc822fe7128d28"
+      },
+      {
+         "Name": "software development manager",
+         "Company": "Bloombase Canada Inc.",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=2ca66b54924ea4b7"
+      },
+      {
+         "Job Title": "software testing engineer",
+         "Company": "Bloombase Canada Inc.",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=68d17279ea1d3e31"
+      },
+      {
+         "Job Title": "software engineer",
+         "Company": "Bloombase Canada Inc.",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=641e2a8c385f2a47"
+      },
+      {
+         "Job Title": "Front-end Software Developer",
+         "Company": "University of British Columbia",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=d168c84e197b0db5"
+      },
+      {
+         "Job Title": "game developer, computer",
+         "Company": "Pearl Abyss Canada Studio Inc.",
+         "Location": "Burnaby, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=2027cacfa509dca2"
+      },
+      {
+         "Job Title": "Software Tools Developer",
+         "Company": "Kardium",
+         "Location": "Burnaby, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=1a4159fb55da161c"
+      },
+      {
+         "Job Title": "software developer",
+         "Company": "InfoSpec Systems Inc.",
+         "Location": "Richmond, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=e86301679a5c22c8"
+      },
+      {
+         "Job Title": "Software Engineer",
+         "Company": "Autoship Systems Corporation",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=5521c5ff6a50f2e7"
+      },
+      {
+         "Job Title": "Software Developer, Senior - Remote, Canada",
+         "Company": "Smile DH",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=5e9babd7fe306234"
+      },
+      {
+         "Job Title": "Frontend Software Engineer II, T&C",
+         "Company": "Highspot",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=e301669957cd98d5"
+      },
+      {
+         "Job Title": "Software Engineer",
+         "Company": "Electronic Arts",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=594e3ecbd87ea87c"
+      },
+      {
+         "Job Title": "Junior Front-End Web Developer",
+         "Company": "Harris Computer Systems",
+         "Location": "North Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=75eace62a14ae352"
+      },
+      {
+         "Job Title": "Web developer",
+         "Company": "The Beard Struggle",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=c551767f95dacdec"
+      },
+      {
+         "Job Title": "Systems Software Engineer - NHL 24",
+         "Company": "Electronic Arts",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=a34cb3c7213f08ca"
+      },
+      {
+         "Job Title": "Full Stack Software Engineer",
+         "Company": "CyberCoders",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=81dc822fe7128d28"
+      },
+      {
+         "Job Title": "software development manager",
+         "Company": "Bloombase Canada Inc.",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=2ca66b54924ea4b7"
+      },
+      {
+         "Job Title": "software testing engineer",
+         "Company": "Bloombase Canada Inc.",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=68d17279ea1d3e31"
+      },
+      {
+         "Job Title": "software engineer",
+         "Company": "Bloombase Canada Inc.",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=641e2a8c385f2a47"
+      },
+      {
+         "Job Title": "Front-end Software Developer",
+         "Company": "University of British Columbia",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=d168c84e197b0db5"
+      },
+      {
+         "Job Title": "game developer, computer",
+         "Company": "Pearl Abyss Canada Studio Inc.",
+         "Location": "Burnaby, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=2027cacfa509dca2"
+      },
+      {
+         "Job Title": "Software Tools Developer",
+         "Company": "Kardium",
+         "Location": "Burnaby, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=1a4159fb55da161c"
+      },
+      {
+         "Job Title": "software developer",
+         "Company": "InfoSpec Systems Inc.",
+         "Location": "Richmond, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=e86301679a5c22c8"
+      },
+      {
+         "Job Title": "Software Engineer",
+         "Company": "Autoship Systems Corporation",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=5521c5ff6a50f2e7"
+      },
+      {
+         "Job Title": "Software Developer, Senior - Remote, Canada",
+         "Company": "Smile DH",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=5e9babd7fe306234"
+      },
+      {
+         "Job Title": "Frontend Software Engineer II, T&C",
+         "Company": "Highspot",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=e301669957cd98d5"
+      },
+      {
+         "Job Title": "Software Engineer",
+         "Company": "Electronic Arts",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=594e3ecbd87ea87c"
+      },
+      {
+         "Job Title": "Junior Front-End Web Developer",
+         "Company": "Harris Computer Systems",
+         "Location": "North Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=75eace62a14ae352"
+      },
+      {
+         "Job Title": "Web developer",
+         "Company": "The Beard Struggle",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=c551767f95dacdec"
+      },
+      {
+         "Job Title": "Systems Software Engineer - NHL 24",
+         "Company": "Electronic Arts",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=a34cb3c7213f08ca"
+      },
+      {
+         "Job Title": "Full Stack Software Engineer",
+         "Company": "CyberCoders",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=81dc822fe7128d28"
+      },
+      {
+         "Job Title": "software development manager",
+         "Company": "Bloombase Canada Inc.",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=2ca66b54924ea4b7"
+      },
+      {
+         "Job Title": "software testing engineer",
+         "Company": "Bloombase Canada Inc.",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=68d17279ea1d3e31"
+      },
+      {
+         "Job Title": "software engineer",
+         "Company": "Bloombase Canada Inc.",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=641e2a8c385f2a47"
+      },
+      {
+         "Job Title": "Front-end Software Developer",
+         "Company": "University of British Columbia",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=d168c84e197b0db5"
+      },
+      {
+         "Job Title": "game developer, computer",
+         "Company": "Pearl Abyss Canada Studio Inc.",
+         "Location": "Burnaby, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=2027cacfa509dca2"
+      },
+      {
+         "Job Title": "Software Tools Developer",
+         "Company": "Kardium",
+         "Location": "Burnaby, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=1a4159fb55da161c"
+      },
+      {
+         "Job Title": "software developer",
+         "Company": "InfoSpec Systems Inc.",
+         "Location": "Richmond, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=e86301679a5c22c8"
+      },
+      {
+         "Job Title": "Software Engineer",
+         "Company": "Autoship Systems Corporation",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=5521c5ff6a50f2e7"
+      },
+      {
+         "Job Title": "Software Developer, Senior - Remote, Canada",
+         "Company": "Smile DH",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=5e9babd7fe306234"
+      },
+      {
+         "Job Title": "Frontend Software Engineer II, T&C",
+         "Company": "Highspot",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=e301669957cd98d5"
+      },
+      {
+         "Job Title": "Software Engineer",
+         "Company": "Electronic Arts",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=594e3ecbd87ea87c"
+      },
+      {
+         "Job Title": "Junior Front-End Web Developer",
+         "Company": "Harris Computer Systems",
+         "Location": "North Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=75eace62a14ae352"
+      },
+      {
+         "Job Title": "Web developer",
+         "Company": "The Beard Struggle",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=c551767f95dacdec"
+      },
+      {
+         "Job Title": "Systems Software Engineer - NHL 24",
+         "Company": "Electronic Arts",
+         "Location": "Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=a34cb3c7213f08ca"
+      },
+      {
+         "Job Title": "Full Stack Software Engineer",
+         "Company": "CyberCoders",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=81dc822fe7128d28"
+      },
+      {
+         "Job Title": "software development manager",
+         "Company": "Bloombase Canada Inc.",
+         "Location": "Remote in Vancouver, BC",
+         "Link": "https://ca.indeed.com/viewjob?jk=2ca66b54924ea4b7"
       }
-      
    ]
 }
