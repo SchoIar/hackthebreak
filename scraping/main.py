@@ -35,6 +35,6 @@ if(__name__ == "__main__"):
     #linkedInScraper() 
     #toJson(indeedScraper('Software Developer').getJob(),'jobs.json','job-list')
 
-    #print(Scraper().scrapeIndeed('Software Developer'))
+    print(Scraper().scrapeIndeed('Software Developer'))
     print(Scraper().scrapeLinkedIn())
 

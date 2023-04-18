@@ -1,42 +1,48 @@
-# CTJ : Level Up Your Career - A Canadian Job Site for Tech Professionals with an XP Bar
+# CTJ: Level Up Your Career - A Canadian Job Site for Tech Professionals with an XP Bar
 
-Our project for Hack The Break 2023. We have created a job site, targetted for those working in Canada based tech jobs. We started by scraping job postings for LinkedIn, using https://github.com/tomquirk/linkedin-api, which uses the Voyager endpoints to find job postings and their relevent fields. 
+Welcome to our project for Hack The Break 2023! We've created a job site specifically tailored for tech professionals seeking opportunities in Canada. Our platform not only showcases relevant job postings but also features an XP bar to help track your progress and maintain motivation during the job search.
 
-We set up an SQL server to store all our data and a TCP server program to handle all the http requests to the server. We realize that applying for jobs can be tiring, and took inspiration from Dulingo, and added an XP bar, to signify progress. 
+Our tech stack includes Python, SQL, HTML, CSS, and JavaScript.
 
-We used Python, SQL, HTML, CSS & JS for this project. 
-
-Cheers,
-
-Anton, Duncan, Leo, Nick.
+*Team members: Anton, Duncan, Leo, Nick.*
 
 ## Scraper
 
-The scraper was built with Python, using the LinkedIn API, beautifulsoup4, Selenium webdriver. 
+Our job postings are scraped from LinkedIn using the [LinkedIn API](https://github.com/tomquirk/linkedin-api), Beautiful Soup 4, and Selenium WebDriver.
 
-To run the scraper, do the following:
-<br/>
-`pip3 install requirements.txt`
-<br/>
+**To run the scraper:**
+
+1. Install the required dependencies:
+   
+`pip3 install -r requirements.txt`
+
+2. Change to the `scraping` directory:
+
 `cd scraping`
-<br/>
-Place your linkedIn account password, and email in a .env, with the names "PASSWORD" and "EMAIL"
-<br/>
+
+3. Create a `.env` file with your LinkedIn email and password, using the following variable names:
+
+`EMAIL=your_email@example.com`
+`PASSWORD=your_password`
+
+4. Run the main script:
+
 `python3 main.py`
-<br/>
 
-Relevent job postings will be put into the `jobs.json` file. Note that this may take a while, as the LinkedIn scraper has a delay, to avoid CHALLENGES.
 
-## TCP server
+The relevant job postings will be saved to the `jobs.json` file. Please note that the scraper may take some time to execute due to the built-in delay designed to avoid CAPTCHAs.
 
-Duncan to comment. 
+## TCP Server
 
-## SQL server
+*To be provided by Duncan.*
 
-Leo to comment.
+## SQL Server
 
-## Future plans? 
+*To be provided by Leo.*
 
-We plan to improve the scraper, to get job postings from other sites, and add the option to filter on the website for only remote jobs. We also hope to expand our database, in order to offer postings on all fields, and allow employers to post jobs within our site. 
+## Future Plans
 
-We also plan to improve our frontend, and learn the MERN stack in the process. 
+- Improve the scraper to fetch job postings from other websites
+- Add a filter for remote job opportunities
+- Expand our database to cover all fields and allow employers to post jobs directly on our platform
+- Enhance the frontend and transition to the MERN stack for a more robust solution
