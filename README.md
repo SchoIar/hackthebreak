@@ -38,7 +38,44 @@ The relevant job postings will be saved to the `jobs.json` file. Please note tha
 
 ## SQL Server
 
-*To be provided by Leo.*
+The SQL manager module handles all the interactions with the MySQL database. It is responsible for managing users, jobs, and saved jobs with their respective notes and application statuses.
+
+### Key Features
+
+- User management: creating new users, updating passwords, checking if users exist, getting and updating user information, and handling streaks.
+- Job management: adding new jobs, updating existing jobs, removing expired jobs, and retrieving job information.
+- Saved jobs: checking if a user has saved a job, saving jobs, counting saved jobs, counting applied jobs, updating job notes, applying to jobs, and unsaving jobs.
+
+### How to Use
+
+1. Make sure you have the `mysql.connector` library installed. If not, install it using:
+
+`pip install mysql-connector-python`
+
+2. Create a `mysql.json` file in the same directory as the `SQLManager.py` file with the following structure:
+
+`{`
+`"user": "your_mysql_username",`
+`"password": "your_mysql_password",`
+`"host": "your_mysql_host",`
+`"database": "your_mysql_database_name"`
+`}`
+
+
+3. Import the `SQLManager` class in your Python script and create an instance:
+
+`python3`
+`from SQLManager import SQLManager`
+
+sql_manager = SQLManager()
+
+4. Use the available methods in the SQLManager class to interact with the database as needed.
+
+5. When you are done using the SQLManager, close the connection:
+
+`sql_manager.close()`
+
+Please refer to the source code comments for more detailed information on each method and its parameters.
 
 ## Future Plans
 
